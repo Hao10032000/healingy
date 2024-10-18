@@ -42,6 +42,10 @@ class themesflat_options_elementor {
             $this->themesflat_options_services($element);
         }
 
+        if ( $post_type == 'post' ) {
+            $this->themesflat_options_blog($element);
+        }
+
     }
 
     public function themesflat_options_page_header($element) {
@@ -1238,6 +1242,34 @@ class themesflat_options_elementor {
                 ],
             ]
         );
+
+        $element->end_controls_section();
+    }
+
+    public function themesflat_options_blog($element) {
+        // TF Blog
+        $element->start_controls_section(
+            'themesflat_blog_options',
+            [
+                'label' => esc_html__('TF Blog', 'healingy'),
+                'tab' => Controls_Manager::TAB_SETTINGS,
+            ]
+        );
+
+        $element->add_control(
+            'style_blog_single',
+            [
+                'label'     => esc_html__( 'Style Single Blog', 'healingy'),
+                'type'      => Controls_Manager::SELECT,
+                'default'   => '',
+                'options'   => [
+                	'' => esc_html__( 'Theme Setting', 'healingy'),
+                    'content-single' => esc_html__( 'Style Has Sidebar', 'healingy'),
+                    'content-single2' => esc_html__( 'Style Fullwidth', 'healingy'),
+                ],
+            ]
+        );
+
 
         $element->end_controls_section();
     }

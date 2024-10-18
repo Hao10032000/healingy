@@ -234,6 +234,7 @@ function themesflat_customize_default($key) {
 		'meta_elements' => 'date,author',
 		'blog_archive_exclude' => '',
 		'blog_featured_title' => 'Blog Details',
+		'style_blog_single' => 'content-single',
 		'sidebar_layout' => 'sidebar-right',
 		'blog_archive_layout' => 'blog-list',
 		'related_post_style'	=> 'blog-grid',

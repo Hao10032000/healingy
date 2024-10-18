@@ -17,6 +17,28 @@ $wp_customize->add_control(
     )
 );   
 
+$wp_customize->add_setting(
+    'style_blog_single',
+    array(
+        'default'           => themesflat_customize_default('style_blog_single'),
+        'sanitize_callback' => 'esc_attr',
+    )
+);
+
+$wp_customize->add_control( 
+    'style_blog_single',
+    array (
+        'type'      => 'select',           
+        'section'   => 'section_content_blog_single',
+        'priority'  => 1,
+        'label'         => esc_html__('Blog Single Style', 'healingy'),
+        'choices'   => array (
+            'content-single'     => esc_html__( 'Has Sidebar','healingy' ),
+            'content-single2'      =>  esc_html__( 'fullwidth','healingy' ),
+        ),
+    )
+);
+
 // Show Post Navigator
 $wp_customize->add_setting (
     'show_post_navigator',

@@ -5,6 +5,13 @@
  * @package healingy
  */
 
+
+$style_blog_single = themesflat_get_opt('style_blog_single');
+if (themesflat_get_opt_elementor('style_blog_single') != '') {
+    $style_blog_single = themesflat_get_opt_elementor('style_blog_single');
+}
+
+ 
 get_header(); ?>
 <div class="container">
 	<div class="row">
@@ -12,7 +19,7 @@ get_header(); ?>
 			<div id="primary" class="content-area">
 				<main id="main" class="post-wrap" role="main">
 				<?php while ( have_posts() ) : the_post(); ?>
-					<?php get_template_part( 'content', 'single' ); ?>
+					<?php get_template_part( $style_blog_single ); ?>
 					<div class="main-single">	
 					<?php if ( is_user_logged_in() ) : ?>
 						<?php if ( get_the_author_meta( 'description' ) ): ?>
@@ -55,11 +62,17 @@ get_header(); ?>
 				<?php endwhile; // end of the loop. ?>
 				</main><!-- #main -->
 			</div><!-- #primary -->
+
+			
+			<?php if ( $style_blog_single == 'content-single' ) : ?>
 			<?php 
 			if ( themesflat_get_opt( 'sidebar_layout' ) == 'sidebar-left' || themesflat_get_opt( 'sidebar_layout' ) == 'sidebar-right' ) :
 				get_sidebar();
 			endif;
 			?>
+			<?php endif; ?>			
+
+
 		</div><!-- /.col-md-12 -->
 		<div class="col-md-12">
 			<?php get_template_part( 'tpl/related-post' )?>

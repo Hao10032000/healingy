@@ -45,6 +45,15 @@ if ( ! function_exists( 'themesflat_body_classes' ) ) {
 		$classes[] = $style_header;
 
 		/**
+		 * Blog Single Style
+		 */
+		$style_blog_single = themesflat_get_opt('style_blog_single');
+		if (themesflat_get_opt_elementor('style_blog_single') != '') {
+		    $style_blog_single = themesflat_get_opt_elementor('style_blog_single');
+		}
+		$classes[] = $style_blog_single;
+
+		/**
 		 * Name Page
 		 */	  
 		 $slug = get_post_field( 'post_name', get_post() );  	
