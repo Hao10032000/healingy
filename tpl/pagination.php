@@ -27,8 +27,8 @@ $links = paginate_links( array(
 	'current'  => $paged,
 	'mid_size' => 1,
 	'add_args' => array_map( 'urlencode', $query_args ),
-	'prev_text' => ( 'Previous' ),
-	'next_text' => ( 'Next' ),
+	'prev_text' => ( '<i class="icon-autodeal-angle-left"></i>' ),
+	'next_text' => ( '<i class="icon-autodeal-angle-right"></i>' ),
 ) );
 
 $numeric_links = paginate_links( array(

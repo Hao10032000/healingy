@@ -170,7 +170,7 @@ $wp_customize->add_control( new themesflat_Control_Drag_And_Drop( $wp_customize,
         'choices' => array(
             'author'    => esc_html__( 'Author', 'healingy' ),
             'date'      => esc_html__( 'Date', 'healingy' ),
-            'view'  => esc_html__( 'View', 'healingy' ),
+            'category'  => esc_html__( 'Category', 'healingy' ),
             'comment'   => esc_html__( 'Comment', 'healingy' ),
         ),        
     ))

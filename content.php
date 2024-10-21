@@ -22,7 +22,6 @@
 					} elseif ( 'readmore' == $content_element ) {
 						echo ( '<div class="bottom-blog">');
 							get_template_part( 'tpl/entry-content/entry-content-readmore' );
-							themesflat_entry_footer();
 						echo ( '</div>');
 					}
 				endforeach;

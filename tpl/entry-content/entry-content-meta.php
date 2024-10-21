@@ -25,8 +25,10 @@ echo '<div class="post-meta">';
             echo'<span class="item-meta post-comments"><i class="meta-icon icon-healingy-grow8" aria-hidden="true"></i><span class="meta-text">';
                     comments_number ();
             echo '</span></span>';
-        } elseif ( 'view' == $meta_element ) {
-            echo '<span class="item-meta post-view"><i class="meta-icon icon-healingy-view" aria-hidden="true"></i>'. themesflat_get_post_views(get_the_ID()) .'</span>';
+        } elseif ( 'category' == $meta_element ) {
+            echo '<div class="item-meta post-categories">'.esc_html__("",'healingy');
+                the_category( ', ' );
+            echo '</div>';
         }
     endforeach;
 echo '</div>';

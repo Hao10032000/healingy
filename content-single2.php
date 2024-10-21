@@ -73,7 +73,7 @@ $themesflat_thumbnail = 'themesflat-blog';
                             // author
                             echo '<span class="item-meta post-author">';
                             printf(
-                            '<i class="meta-icon icon-healingy-grow7" aria-hidden="true"></i><a class="meta-text" href="%s" title="%s" rel="author">Posted by: %s</a>',
+                            '<i class="meta-icon icon-healingy-grow7" aria-hidden="true"></i><a class="meta-text" href="%s" title="%s" rel="author">by: %s</a>',
                             esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) )),
                             esc_attr( sprintf( esc_html__( 'View all posts by %s', 'healingy' ), get_the_author() ) ),get_the_author());
                         echo '</span>';
@@ -96,6 +96,10 @@ $themesflat_thumbnail = 'themesflat-blog';
 		            </div><!-- .entry-content -->
 	            </div><!-- /.main-post -->
 
+				<?php if( themesflat_get_opt('show_entry_footer_content') == 1 ): ?>		
+				<?php themesflat_entry_footer(); ?>
+			<?php endif; ?>
+
                 </div>
 
             </div>
@@ -105,6 +109,3 @@ $themesflat_thumbnail = 'themesflat-blog';
 	
 
 </article><!-- #post-## -->
-<?php if( themesflat_get_opt('show_entry_footer_content') == 1 ): ?>		
-	<?php themesflat_entry_footer(); ?>
-<?php endif; ?>
