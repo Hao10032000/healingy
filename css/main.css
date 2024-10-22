@@ -2458,9 +2458,8 @@ article {
 .page-wrap.sidebar-right .content-area {
     float: left;
     width: 72%;
-    padding-right: 63px;
+    padding-right: 48px;
     padding-left: 34px;
-    border-right: 1px solid #ececec;
     position: relative
 }
 
@@ -2469,7 +2468,7 @@ article {
     float: left;
     width: 28%;
     position: relative;
-    padding-left: 36px
+    padding-left: 31px
 }
 
 .page-wrap.sidebar-left .content-area {
@@ -2833,9 +2832,10 @@ line-height: 26px;
 .breadcrumbs span.sep {
     position: relative;
     text-align: center;
-    margin: 0 15px;
-    font-size: 9px;
-    vertical-align: text-bottom
+    margin: 0 9px;
+    font-size: 13px;
+    color: #5E5A56;
+    font-weight: 100;
 }
 
 .breadcrumbs a,
@@ -3181,7 +3181,7 @@ article .featured-post img {
 
 .blog-single .featured-post,
 .blog-single .themesflat_audio {
-    margin-bottom: 30px;
+    margin-bottom: 38px;
     position: relative
 }
 
@@ -3264,8 +3264,8 @@ footer .widget.widget_rss ul ul li:first-child {
 }
 
 .blog-single .featured-post img {
-    border-radius: 0;
-    height: 470px;
+    border-radius: 12px;
+    height: 478px;
     object-fit: cover
 }
 
@@ -3333,7 +3333,7 @@ margin-bottom: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 30px
+    margin-bottom: 40px
 }
 
 .blog-single .content-post-single h5 {
@@ -3523,7 +3523,7 @@ margin-bottom: 16px;
     gap: 12px;
 }
 
-.single.content-single2 .content-single-fullwidth .post-categories a {
+.content-post-sigle-title .post-categories a {
     font-family: 'Archivo';
     font-size: 14px;
     font-weight: 600;
@@ -3531,18 +3531,26 @@ margin-bottom: 16px;
     letter-spacing: 0.08em;
     color: #3C210E;
     background: #F5F1ED;
-    padding: 5px 20px;
+    padding: 9px 20px;
     border-radius: 40px;
     text-transform: uppercase;
 }
 
-.single.content-single2 .content-single-fullwidth .post-categories {
+.single.content-single2 .content-post-sigle-title .post-categories a {
+    padding: 5px 20px;
+}
+
+.content-post-sigle-title .post-categories {
+    margin-bottom: 18px;
+}
+
+.single.content-single2 .content-post-sigle-title .post-categories {
     display: flex;
     justify-content: center;
     margin-bottom: 16px;
 }
 
-.single.content-single2 .content-single-fullwidth h1 {
+.content-post-sigle-title h1 {
     font-family: 'Archivo';
     font-size: 44px;
     font-weight: 500;
@@ -3554,26 +3562,39 @@ margin-bottom: 16px;
     text-align: center;
 }
 
-.single.content-single2 .content-post-single .meta {
+.content-post-single .meta {
     display: flex;
     align-items: center;
     column-gap: 33px;
     row-gap: 10px;
-    justify-content: center;
     width: 100%;
 }
 
-.single.content-single2 .content-post-single .meta .meta-text {
+.single.content-single2 .content-post-single .meta {
+    justify-content: center;
+}
+
+.single article .entry-title {
+    font-size: 44px;
+    margin-bottom: 16px;
+}
+
+.content-post-single .meta .meta-text {
     font-size: 18px;
     font-weight: 400;
     line-height: 30px;
 }
 
-.single.content-single2 .content-post-single .meta .item-meta {
+.content-post-single .meta .item-meta {
     position: relative;
 }
 
-.single.content-single2 .content-post-single .meta .item-meta:not(:last-child)::after {
+.content-post-single .meta .item-meta i {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.content-post-single .meta .item-meta:not(:last-child)::after {
     content: '';
     background: #E4E4E4;
     width: 1px;

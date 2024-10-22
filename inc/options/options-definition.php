@@ -203,7 +203,7 @@ function themesflat_customize_default($key) {
 			'letter_spacing' => '0px',
 		),
 		'bread_crumb_prefix' =>'',
-		'breadcrumb_separator' =>  '<i class="icon-healingy-ona-7"></i>',
+		'breadcrumb_separator' =>  '/',
 		'breadcrumb_color' => '#535656',
 
 		'typography_buttons' => array(
