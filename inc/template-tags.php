@@ -60,7 +60,7 @@ function themesflat_entry_footer() {
 	$tags_links = '';
 	if ( 'post' == get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', ' ' );
+		$tags_list = get_the_tag_list( ' ', ', ' );
 		if ( $tags_list && is_single() ) {
 			$tags_links = sprintf( '<div class="tags-links"><h5>' . esc_html__( 'Tags: ', 'healingy' ) . '</h5>' . esc_html__( ' %1$s', 'healingy' ) . '</div>', $tags_list  );
 
@@ -97,13 +97,11 @@ function themesflat_post_navigation() {
 
 				$prevPost = get_adjacent_post( false, '', true);
 				if( is_object( $prevPost ) ){
-					$prevthumbnail = get_the_post_thumbnail($prevPost->ID);
 					$prev_title = get_the_title($prevPost->ID);
 				}
 				$prev = esc_html__( 'Published In', 'healingy' );
 				$date = get_the_date();
 				echo '<li class="post-navigation previous-post">';
-				 	previous_post_link('<div class="thump-post">%link</div>', $prevthumbnail); 
 					echo '<div class="content">';
 						previous_post_link('<div class="prev-button">%link</div>', $date); 
 						previous_post_link('<div class="title-post">%link</div>', $prev_title); 
@@ -113,13 +111,11 @@ function themesflat_post_navigation() {
 
 				$prevPost = get_adjacent_post( false, '', true);
 				if( is_object( $prevPost ) ){
-					$prevthumbnail = get_the_post_thumbnail($prevPost->ID);
 					$prev_title = get_the_title($prevPost->ID);
 					$prev = esc_html__( 'Previous', 'healingy' );
 					$date = get_the_date();
 
 					echo '<li class="post-navigation previous-post">';
-						 previous_post_link('<div class="thump-post">%link</div>', $prevthumbnail); 
 						echo '<div class="content">';
 							previous_post_link('<div class="post-button prev-button">%link</div>', $prev); 
 							previous_post_link('<div class="title-post">%link</div>', $prev_title); 
@@ -129,7 +125,6 @@ function themesflat_post_navigation() {
 
 				$nextPost = get_adjacent_post( false, '', false);
 				if( is_object( $nextPost ) ){
-					$nextthumbnail = get_the_post_thumbnail($nextPost->ID);
 					$next_title = get_the_title($nextPost->ID);
 					$next = esc_html__( 'next post', 'healingy' );
 					$date = get_the_date();
@@ -138,7 +133,6 @@ function themesflat_post_navigation() {
 						next_post_link('<div class="post-button next-button">%link</div>', $next); 
 							next_post_link('<div class="title-post">%link</div>', $next_title); 
 						echo '</div>';
-						next_post_link('<div class="thump-post">%link</div>', $nextthumbnail); 
 					echo '</li>';
 				}
 				

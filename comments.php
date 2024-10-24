@@ -23,7 +23,7 @@ function themesflat_comments($comment, $args, $depth) {
 	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
 		<article id="comment-<?php comment_ID(); ?>" class="comment_wrap clearfix">
 			<div class="gravatar">
-				<?php if ( $args['avatar_size'] != 0 ) echo get_avatar( $comment, 70 ); ?> 
+				<?php if ( $args['avatar_size'] != 0 ) echo get_avatar( $comment, 52 ); ?> 
             </div>
 			<div class='comment_content'>
 				<div class="comment_meta clearfix">					
