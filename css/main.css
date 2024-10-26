@@ -140,9 +140,9 @@ a:hover {
     transition: .3s ease-in-out
 }
 
-.bottom ul.menu>li>a:hover,
-.form-email button {
-    text-decoration: underline
+.bottom ul.menu>li>a:hover
+ {
+    color: var(--theme-secondary-color);;
 }
 
 body,
@@ -613,8 +613,7 @@ hr {
     margin-bottom: 20px
 }
 
-ol,
-ul {
+ol{
     padding: 0;
     margin: 0 0 30px 25px
 }
@@ -952,8 +951,8 @@ input[type=radio]:checked {
 .wp-block-quote.is-style-large,
 .wp-block-verse,
 .wp-block-video:not(.alignwide):not(.alignfull) {
-    margin-bottom: 30px;
-    margin-top: 30px
+    margin-bottom: 20px;
+    margin-top: 20px
 }
 
 .wp-block-group.has-background {
@@ -1375,6 +1374,7 @@ header .flat-information li a {
     align-items: center;
     margin-left: 30px
 }
+
 /* buttton */
 .tf-btn {
     background-color: var(--theme-secondary-color);
@@ -1388,10 +1388,12 @@ header .flat-information li a {
     text-align: center;
     position: relative;
 }
+
 .tf-btn span {
-   z-index: 2;
-   position: relative;
+    z-index: 2;
+    position: relative;
 }
+
 .tf-btn::after {
     content: "";
     width: 100%;
@@ -1404,13 +1406,16 @@ header .flat-information li a {
     z-index: 1;
     transition: all 0.2s ease;
 }
+
 .tf-btn:hover::after {
     bottom: 0%;
     border-radius: 0%;
 }
+
 .tf-btn:hover span {
     color: var(--theme-secondary-color);
 }
+
 /* buttton */
 
 
@@ -1419,6 +1424,7 @@ header .flat-information li a {
     font-size: 20px;
     display: block
 }
+
 #header .header-wrap .header-ct-right .tf-btn {
     margin-left: 20px;
 
@@ -1789,7 +1795,7 @@ article .post-meta .item-meta a:hover {
 }
 
 #mainnav ul li:hover>ul.sub-menu {
-    top: 150%;
+    top: 100%;
     opacity: 1;
     visibility: visible
 }
@@ -2560,7 +2566,7 @@ article .content-post {
     -ms-word-wrap: break-word;
     word-break: break-word;
     word-wrap: break-word;
-    padding-top: 25px;
+    padding-top: 19px;
     position: relative
 }
 
@@ -2693,12 +2699,33 @@ article .themesflat-btn-blog i {
 .blog-list article .entry-title,
 .navigation.posts-navigation .nav-links li .title-post a {
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
     word-break: break-word
 }
+.blog-archive .blog-post:hover .featured-post img {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+}
+.blog-archive .blog-post:hover .content-post .entry-title a{
+    background-size: 100% 1px;
+}
+.blog-list article .entry-title {
+    display: inline;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(currentColor), color-stop(98%, currentColor));
+    background-image: linear-gradient(to bottom, currentColor 0%, currentColor 98%);
+    background-size: 0 1px;
+    background-repeat: no-repeat;
+    background-position: left 100%;
+}
+
 
 .blog-grid-simple article .wrap-meta-button {
     line-height: initial;
@@ -2758,19 +2785,26 @@ article .bottom-blog {
 .navigation.posts-navigation .nav-links li .post-button,
 .sidebar .wp-block-media-text .wp-block-media-text__content p,
 .widget_calendar table {
-    margin-bottom: 5px
+    margin-bottom: 8px
 }
 
 .blog-list article .post-meta,
-.custom-footer-widget-area .widget.widget-instagram-feed .widget-title,
+.custom-footer-widget-area ,
 .item article .post-meta {
-    margin-bottom: 7px;
+    margin-bottom: 5px;
 }
 
-.blog-list article .post-content  {
-font-size: 16px;
-font-weight: 400;
-line-height: 26px;
+
+.blog-list article .post-content {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word
 }
 
 .page-title {
@@ -2993,8 +3027,19 @@ article .featured-post img {
     border-radius: 12px;
     width: 100%;
     position: relative;
-    height: 416px;
-    object-fit: cover
+    height: 308px;
+    object-fit: cover;
+    -webkit-transition: all 1s cubic-bezier(0.3, 1, 0.35, 1) 0s;
+    transition: all 1s cubic-bezier(0.3, 1, 0.35, 1) 0s;
+}
+article .featured-post .post-meta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+article .featured-post .post-meta {
+
 }
 
 .blog article .featured-post a,
@@ -3006,17 +3051,18 @@ article .featured-post img {
 }
 
 .blog-list .blog-post .featured-post a {
-    font-family: 'Open Sans';
-    font-weight: 700;
-    font-size: 13px;
-    color: #fff;
-    padding: 3px 13px;
-    background: var(--theme-secondary-color);
-    border-radius: 5px
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff !important;
+    width: 60px;
+    padding: 10px 5px;
+    background: #3C210E;
+    border-radius: 0px 0px 12px 0px;
+    text-align: center;
 }
 
 .bg-404,
-.blog-list .blog-post .featured-post a:hover,
 .link-line .elementor-heading-title>a:after {
     background: var(--theme-accent-color)
 }
@@ -3039,6 +3085,9 @@ article .featured-post img {
 .widget.widget_latest_news .text {
     overflow: hidden
 }
+.blog-list .blog-post .featured-post{
+    border-radius: 12px;
+}
 
 .blog-list .blog-post .featured-post .post-categories {
     position: absolute;
@@ -3058,9 +3107,8 @@ article .featured-post img {
 
 .blog .navigation,
 .page-template-blog .navigation {
-    margin-top: 42px;
-    padding-top: 32px;
-    border-top: 1px solid #ececec
+    margin-top: 40px;
+    text-align: center;
 }
 
 
@@ -3192,15 +3240,6 @@ article .post-meta .item-meta {
     position: relative
 }
 
-article .post-meta .item-meta .meta-icon {
-    margin-right: 6px;
-    font-size: 15px;
-    color: #9c9ea6
-}
-
-article .post-meta .item-meta a {
-    color: #9c9ea6 !important
-}
 
 .blog-post.post_format-post-format-image .content-post .entry-title {
     padding-right: 50px;
@@ -3270,10 +3309,10 @@ footer .widget.widget_rss ul ul li:first-child {
 }
 
 .content-single2 .social-share-article.share-absolute h5 {
-font-size: 16px;
-font-weight: 600;
-line-height: 24px;
-margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 16px;
 }
 
 .content-single2 .social-share-article.share-absolute ul li a {
@@ -3463,11 +3502,11 @@ margin-bottom: 16px;
     border: none;
 }
 
-.single.content-single2 #themesflat-content > .container {
+.single.content-single2 #themesflat-content>.container {
     max-width: 100%;
 }
 
-.single.content-single2 #themesflat-content > .container > .row > * {
+.single.content-single2 #themesflat-content>.container>.row>* {
     padding-left: 0;
     padding-right: 0;
 }
@@ -3821,7 +3860,7 @@ margin-bottom: 16px;
     font-weight: 600;
     line-height: 22px;
     letter-spacing: 0.08em;
-    color: #C72929;    
+    color: #C72929;
     text-transform: uppercase;
 }
 
@@ -5637,8 +5676,8 @@ footer .widget.widget_categories select option {
 
 footer .widget .widget-title,
 footer .widget h2 {
-    margin-top: 8px;
-    margin-bottom: 25px
+    margin-top: 0px;
+    margin-bottom: 20px
 }
 
 footer .wp-block-search .wp-block-search__label {
@@ -5750,7 +5789,135 @@ footer .wp-block-search .wp-block-search__label {
 
 #footer {
     z-index: 5;
-    border-bottom: 1px solid #ececec12
+}
+#footer .widgets-areas:first-child{
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#footer .wrap-widgets-1 {
+    padding-right: 10em;
+}
+
+#footer .wrap-widgets-1 .wp-block-image {
+    margin-top: 48px;
+    margin-bottom: 28px;
+}
+/* #footer .wrap-widgets-1 .wp-block-group{
+    margin-top: 0px;
+} */
+
+#footer .wrap-widgets-1 p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+#footer .wrap-widgets-1 .footer-info {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-widgets .wrap-widgets-1 .widget {
+    margin-bottom: 28px;
+}
+
+#footer .wrap-widgets-1 .footer-info li {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+#footer .wrap-widgets-1 .footer-info li:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+#footer .wrap-widgets-1 .wp-block-image img {
+    width: 192px;
+}
+
+#footer .wrap-widgets-2 {
+    padding-left: 7em;
+    padding-top: 28px;
+    padding-bottom: 50px;
+}
+
+#footer .wrap-widgets-2 .widget.widget_block {
+    margin-bottom: 5px;
+}
+
+#footer .wrap-widgets-2 .widget.widget_block .wp-block-group {
+    margin-bottom: 5px;
+}
+
+#footer .wrap-widgets-2 .wp-block-group-is-layout-constrained {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+#footer .wrap-widgets-2 .wp-block-group-is-layout-constrained .widget h2 {
+    margin-top: 0px;
+    margin-bottom: 6px;
+}
+
+.mail-footer .mail-footer-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.mail-footer p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #ABB0B4;
+    margin-top: 20px;
+}
+
+.mail-footer-wrap .form-group {
+    width: 100%;
+}
+
+.mail-footer-wrap .form-group #email {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 16.5px 24px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #ABB0B4;
+    width: 100%;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.mail-footer-wrap .form-group #email::placeholder {
+    color: #ABB0B4;
+}
+
+.mail-footer-wrap .btn-submit {
+    width: 60px;
+    height: 60px;
+    background: #FEDAC2;
+    position: relative;
+}
+
+.mail-footer-wrap .btn-submit input {
+    padding: 19px 30px;
+    background: transparent !important;
+    z-index: 1;
+    position: relative;
+}
+
+.mail-footer-wrap .btn-submit i {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    color: #3C210E;
+    font-size: 30px;
+    padding: 19px 12px;
+    z-index: 0;
 }
 
 footer .wrap-widgets-1 .widget_media_image {
@@ -5825,7 +5992,7 @@ footer .widget ul li a {
 .footer-widgets .widget.widget_nav_menu ul li {
     list-style-type: none;
     display: block;
-    padding: 1px 0
+    padding: 0px 0
 }
 
 .wp-block-gallery:not(.has-nested-images).alignleft {
@@ -5957,8 +6124,6 @@ footer .widget.widget_product_categories ul>li>a:hover:before {
 
 .bottom {
     z-index: 2;
-    padding: 28px 0;
-    border-top: 1px solid #fffFFF0D
 }
 
 .bottom .container-inside {
@@ -5966,7 +6131,9 @@ footer .widget.widget_product_categories ul>li>a:hover:before {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    border-radius: 4px
+    border-radius: 4px;
+    padding: 14px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .bottom ul li {
@@ -5977,7 +6144,20 @@ footer .widget.widget_product_categories ul>li>a:hover:before {
 
 .bottom ul li a {
     padding: 0;
-    margin-left: 22px
+    margin-left: 17px;
+}
+.bottom ul li{
+    position: relative;
+}
+.bottom ul li::before {
+    height: 12px;
+    position:absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    content: '';
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .bottom .themesflat-socials {
@@ -6003,10 +6183,10 @@ footer .widget.widget_product_categories ul>li>a:hover:before {
 }
 
 .bottom ul.menu>li>a {
-    white-space: nowrap;
-    font-weight: 500;
-    font-size: 15px;
-    font-family: Poppins
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #ABB0B4;
 }
 
 .bottom ul.menu>li:first-child>a {
@@ -9441,10 +9621,7 @@ button:hover {
     border: 1px solid #dedede
 }
 
-.blog #footer {
-    padding-top: 103px;
-    padding-bottom: 61px
-}
+.blog #footer {}
 
 .single .page-wrap.sidebar-right .widget-area {
     width: 28.7%;
@@ -9458,6 +9635,7 @@ button:hover {
 .shape-slider {
     clip-path: polygon(0 0, 100% 0, 100% 91%, 50% 100%, 0 91%)
 }
+
 /*blog*/
 .wrap-blog-article.blog-archive.blog-two-columns {
     display: grid;

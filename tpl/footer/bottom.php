@@ -12,10 +12,8 @@ if (themesflat_get_opt('show_bottom') == 1):
                             </div>
                         </div>
                         <div class="content-right">
-                            <?php  
-                                if ( themesflat_get_opt('social_bottom') == 1 ): 
-                                    themesflat_render_social();    
-                                endif;
+                            <?php
+                                 wp_nav_menu( array( 'theme_location' => 'bottom', 'fallback_cb' => 'themesflat_menu_fallback', 'container' => false ) );
                             ?>
                         </div>                 
                     </div>

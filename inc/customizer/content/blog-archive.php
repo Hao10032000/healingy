@@ -13,10 +13,11 @@ $wp_customize->add_control(
         'section'   => 'section_content_blog_archive',
         'priority'  => 1,
         'label'         => esc_html__('Sidebar Position', 'healingy'),
+        'default'           => 'fullwidth',
         'choices'   => array (
+            'fullwidth'         =>   esc_html__( 'Full Width','healingy' ),
             'sidebar-right'     => esc_html__( 'Sidebar Right','healingy' ),
             'sidebar-left'      =>  esc_html__( 'Sidebar Left','healingy' ),
-            'fullwidth'         =>   esc_html__( 'Full Width','healingy' ),
         ),
     )
 );

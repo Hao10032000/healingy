@@ -46,10 +46,11 @@ $themesflat_thumbnail = $imgs[$layout];
 ?>
 <div class="related-post related-posts-box">
     <div class="box-wrapper">
-        <h3 class="box-title"><?php esc_html_e( 'Related Post', 'healingy' ) ?></h3>
+        <h3 class="box-title"><?php esc_html_e( 'Related articles', 'healingy' ) ?></h3>
+        <p><?php esc_html_e( 'Your go-to source for mental health insights, tools, and advice.', 'healingy' ) ?></p>
         <div class="box-content">
             <div class="<?php echo esc_attr( implode( ' ', $class ) ) ?>">
-            <?php
+                <?php
             $query = new WP_Query($args);
             if( $query->have_posts() ) {
                 while ($query->have_posts()) : $query->the_post(); ?>
@@ -58,16 +59,42 @@ $themesflat_thumbnail = $imgs[$layout];
                         <div class="entry-border">
                             <?php if (has_post_thumbnail()):  ?>
                             <div class="featured-post">
+                            <?php 
+                                echo '<div class="post-meta">';
+                                  $meta_elements = themesflat_layout_draganddrop(themesflat_get_opt( 'meta_elements' ));
+                                  foreach ( $meta_elements as $meta_element ) :
+                                  if ( 'date' == $meta_element ) {
+                                  echo '<span class="item-meta post-date">';   
+                                  $archive_year  = get_the_time('Y'); 
+                                  $archive_month = get_the_time('m'); 
+                                  $archive_day   = get_the_time('d');                 
+                                echo '<a class="meta-text" href="'.get_day_link( $archive_year, $archive_month, $archive_day).'">'.get_the_date().'</a>';
+                                echo '</span>';
+                                }
+                                endforeach;
+                                echo '</div>';
+                            ?>
                                 <a href="<?php the_permalink();?>">
-                                    <?php  the_post_thumbnail( $themesflat_thumbnail ); ?>                                        
+                                    <?php  the_post_thumbnail( $themesflat_thumbnail ); ?>
                                 </a>
-                                <div class="overlay"></div>
                             </div>
                             <?php endif; ?>
-                            
-                            <div class="content-post"> 
-                                <?php get_template_part( 'tpl/entry-content/entry-content-meta' ); ?>    
-                                <h2 class="entry-title"><a href="<?php the_permalink();?>" title="<?php the_title_attribute(); ?>"><?php the_title();?></a></h2>                                    
+
+                            <div class="content-post">
+                                <?php get_template_part( 'tpl/entry-content/entry-content-meta' ); ?>
+                                <h2 class="entry-title">
+                                    <a href="<?php the_permalink();?>" title="<?php the_title_attribute(); ?>">
+                                        <?php the_title();?>
+                                    </a>
+                                </h2>
+                                <?php 
+                                 echo '<div class="post-content post-excerpt clearfix">';
+                                 if( strpos( get_the_content(), 'more-link' ) === false ) {
+                                     add_filter( 'excerpt_more', 'themesflat_excerpt_not_more' );
+                                     the_excerpt();     
+                                 };
+                             echo '</div>';
+                                ?>
                             </div>
                         </div>
                     </article><!-- /.entry -->
@@ -81,5 +108,3 @@ $themesflat_thumbnail = $imgs[$layout];
         </div>
     </div>
 </div>
-
-

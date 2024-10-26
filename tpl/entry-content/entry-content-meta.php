@@ -10,7 +10,7 @@ echo '<div class="post-meta">';
       if ( 'author' == $meta_element ) {
                 echo '<span class="item-meta post-author">';
                     printf(
-                    '<a class="meta-text" href="%s" title="%s" rel="author">Posted by: %s</a>',
+                    '<a class="meta-text" href="%s" title="%s" rel="author">%s</a>',
                     esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) )),
                     esc_attr( sprintf( esc_html__( 'View all posts by %s', 'healingy' ), get_the_author() ) ),get_the_author());
                 echo '</span>';
@@ -19,9 +19,9 @@ echo '<div class="post-meta">';
                     comments_number ();
             echo '</span></span>';
         } elseif ( 'category' == $meta_element ) {
-            echo '<div class="item-meta post-categories">'.esc_html__("",'healingy');
+            echo '<span class="item-meta post-categories">'.esc_html__("",'healingy');
                 the_category( ', ' );
-            echo '</div>';
+            echo '</span>';
         }
     endforeach;
 echo '</div>';

@@ -93,7 +93,6 @@ echo '<div class="post-meta">';
 echo '</div>';
 ?>
     <?php echo wp_kses($feature_post, themesflat_kses_allowed_html()); ?>
-    <div class="overlay"></div>
 </div>
 
 <?php

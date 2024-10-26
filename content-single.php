@@ -7,20 +7,20 @@ $themesflat_thumbnail = 'themesflat-blog';
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-post blog-single' ); ?>>
-	<!-- begin feature-post single  -->
-	<div class="content-post-sigle-title">
-                    <?php 
+    <!-- begin feature-post single  -->
+    <div class="content-post-sigle-title">
+        <?php 
                         echo '<div class=" post-categories">'.esc_html__("",'healingy');
                             the_category( ', ' );
                         echo '</div>';
                     ?>
-		            <?php if ( themesflat_get_opt('blog_featured_title') != '' ): ?>
-		            <h1 class="entry-title"><?php the_title(); ?></h1>
-		            <?php endif; ?>
-	            </div>
-				<div class="content-post-single">
-		            <div class="meta">
-		            	<?php 
+        <?php if ( themesflat_get_opt('blog_featured_title') != '' ): ?>
+        <h1 class="entry-title"><?php the_title(); ?></h1>
+        <?php endif; ?>
+    </div>
+    <div class="content-post-single">
+        <div class="meta">
+            <?php 
                             // date 
                             echo '<span class="item-meta post-date">';   
                             $archive_year  = get_the_time('Y'); 
@@ -36,19 +36,19 @@ $themesflat_thumbnail = 'themesflat-blog';
                             esc_attr( sprintf( esc_html__( 'View all posts by %s', 'healingy' ), get_the_author() ) ),get_the_author());
                         echo '</span>';
 		            	?>
-		            </div>
-	            </div>
+        </div>
+    </div>
 
-	<?php get_template_part( 'tpl/feature-post-single'); ?>
-	<!-- end feature-post single-->
+    <?php get_template_part( 'tpl/feature-post-single'); ?>
+    <!-- end feature-post single-->
 
-	
-	
 
-	<div class="main-post">		
-		<div class="entry-content clearfix">
-			<?php the_content(); ?>
-			<?php
+
+
+    <div class="main-post">
+        <div class="entry-content clearfix">
+            <?php the_content(); ?>
+            <?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'healingy' ),
 				'after'  => '</div>',
@@ -56,9 +56,9 @@ $themesflat_thumbnail = 'themesflat-blog';
 				'link_after'  => '</span>'
 				) );
 				?>
-		</div><!-- .entry-content -->
-	</div><!-- /.main-post -->
+        </div><!-- .entry-content -->
+    </div><!-- /.main-post -->
 </article><!-- #post-## -->
-<?php if( themesflat_get_opt('show_entry_footer_content') == 1 ): ?>		
-	<?php themesflat_entry_footer(); ?>
+<?php if( themesflat_get_opt('show_entry_footer_content') == 1 ): ?>
+<?php themesflat_entry_footer(); ?>
 <?php endif; ?>
