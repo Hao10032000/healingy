@@ -12,22 +12,24 @@ switch ( get_post_format() ) {
 
 		if ( empty( $images ) )
 			break;
-		?>		
-		<div class="featured-post">		
-			<div class="customizable-carousel" data-loop="true" data-items="1" data-md-items="1" data-sm-items="1" data-xs-items="1" data-space="15" data-autoplay="true" data-autospeed="4000" data-nav-dots="false" data-nav-arrows="true">
-					<?php 
+		?>
+<div class="featured-post">
+    <div class="customizable-carousel" data-loop="true" data-items="1" data-md-items="1" data-sm-items="1"
+        data-xs-items="1" data-space="15" data-autoplay="true" data-autospeed="4000" data-nav-dots="false"
+        data-nav-arrows="true">
+        <?php 
 					if ( !empty( $images ) && is_array( $images ) ) {
 						foreach ( $images as $image ) { ?>
-							<div class="item-gallery">  
-							    <?php echo wp_get_attachment_image($image,$themesflat_thumbnail); ?>
-							    <div class="overlay"></div>
-							</div>
-						<?php }
+        <div class="item-gallery">
+            <?php echo wp_get_attachment_image($image,$themesflat_thumbnail); ?>
+            <div class="overlay"></div>
+        </div>
+        <?php }
 					} 
-					?> 
-			</div>	
-		</div><!-- /.feature-post -->
-		<?php 
+					?>
+    </div>
+</div><!-- /.feature-post -->
+<?php 
 	break;
 	case 'video':	
 		$video = themesflat_meta('video_url');
@@ -74,10 +76,25 @@ switch ( get_post_format() ) {
 }
 
 if ( $feature_post ): ?>
-	<div class="featured-post"> 
-	<?php echo wp_kses($feature_post, themesflat_kses_allowed_html()); ?>
-		<div class="overlay"></div>
-	</div>
+<div class="featured-post">
+    <?php 
+echo '<div class="post-meta">';
+    $meta_elements = themesflat_layout_draganddrop(themesflat_get_opt( 'meta_elements' ));
+    foreach ( $meta_elements as $meta_element ) :
+        if ( 'date' == $meta_element ) {
+            echo '<span class="item-meta post-date">';   
+                $archive_year  = get_the_time('Y'); 
+                $archive_month = get_the_time('m'); 
+                $archive_day   = get_the_time('d');                 
+                echo '<a class="meta-text" href="'.get_day_link( $archive_year, $archive_month, $archive_day).'">'.get_the_date().'</a>';
+            echo '</span>';
+        }
+    endforeach;
+echo '</div>';
+?>
+    <?php echo wp_kses($feature_post, themesflat_kses_allowed_html()); ?>
+    <div class="overlay"></div>
+</div>
 
 <?php
 endif;

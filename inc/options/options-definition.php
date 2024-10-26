@@ -243,7 +243,7 @@ function themesflat_customize_default($key) {
 		'blog_sidebar_list'		  => 'blog-sidebar',	
 		'blog_archive_readmore' => 1,
 		'blog_archive_post_excepts_length' => 25,
-		'blog_archive_readmore_text' => 'Read More <i class="icon-healingy-ona-17"></i>',
+		'blog_archive_readmore_text' => 'Read More <i class="icon-healingy-right"></i>',
 		'blog_archive_pagination_style' => 'pager-numeric',
 		'blog_posts_per_page'	=> 3,
 		'blog_order_by'	=> 'date',

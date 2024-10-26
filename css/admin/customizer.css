@@ -1103,8 +1103,8 @@ li#accordion-panel-shop_panel > h3.accordion-section-title:before {
 }
 .themesflat-sortable li.themesflat-sortable-li .icon-healingy-toogle-off:before {
     color: #000;
-    content: "\e950";
-    font-family: "healingy";
+    content: "\f204";
+    font-family: "Font Awesome 5 Pro";
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -ms-transition: all 0.3s ease 0s;
@@ -1114,3 +1114,4 @@ li#accordion-panel-shop_panel > h3.accordion-section-title:before {
 .themesflat-sortable li.themesflat-sortable-li .themesflat-hide-sortee {
     cursor: pointer;
 }
+

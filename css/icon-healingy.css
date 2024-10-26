@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'healingy';
   src:
-    url('../fonts/healingy.ttf?b1a91r') format('truetype'),
-    url('../fonts/healingy.woff?b1a91r') format('woff'),
-    url('../fonts/healingy.svg?b1a91r#healingy') format('svg');
+    url('../fonts/healingy.ttf?9ayo48') format('truetype'),
+    url('../fonts/healingy.woff?9ayo48') format('woff'),
+    url('../fonts/healingy.svg?9ayo48#healingy') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-healingy-cart:before {
+  content: "\e900";
+}
 .icon-healingy-chat:before {
   content: "\e901";
 }
@@ -52,59 +55,59 @@
   content: "\e909";
 }
 .icon-healingy-instagram:before {
-  content: "\e90a";
-}
-.icon-healingy-linkedin2:before {
-  content: "\e90d";
-}
-.icon-healingy-mail:before {
   content: "\e90e";
 }
-.icon-healingy-map:before {
+.icon-healingy-linkedin2:before {
   content: "\e90f";
 }
-.icon-healingy-Minus:before {
-  content: "\e913";
+.icon-healingy-mail:before {
+  content: "\e910";
 }
-.icon-healingy-paper-plane:before {
+.icon-healingy-map:before {
+  content: "\e911";
+}
+.icon-healingy-Minus:before {
   content: "\e915";
 }
-.icon-healingy-phone:before {
-  content: "\e916";
-}
-.icon-healingy-Plus:before {
+.icon-healingy-paper-plane:before {
   content: "\e917";
 }
-.icon-healingy-right:before {
+.icon-healingy-phone:before {
   content: "\e918";
 }
-.icon-healingy-right1:before {
+.icon-healingy-Plus:before {
   content: "\e919";
 }
-.icon-healingy-search:before {
+.icon-healingy-right:before {
   content: "\e91a";
 }
-.icon-healingy-sent:before {
+.icon-healingy-right1:before {
   content: "\e91b";
 }
-.icon-healingy-settings:before {
+.icon-healingy-search:before {
   content: "\e91c";
 }
-.icon-healingy-skype-1:before {
+.icon-healingy-sent:before {
   content: "\e91d";
 }
-.icon-healingy-start:before {
+.icon-healingy-settings:before {
+  content: "\e91e";
+}
+.icon-healingy-skype:before {
   content: "\e91f";
 }
-.icon-healingy-time:before {
-  content: "\e921";
+.icon-healingy-start:before {
+  content: "\e920";
 }
-.icon-healingy-twitter:before {
+.icon-healingy-time:before {
   content: "\e922";
 }
-.icon-healingy-up:before {
+.icon-healingy-twitter:before {
   content: "\e923";
 }
-.icon-healingy-user:before {
+.icon-healingy-up:before {
   content: "\e924";
+}
+.icon-healingy-user:before {
+  content: "\e925";
 }

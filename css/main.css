@@ -1526,8 +1526,7 @@ article .post-meta .item-meta a:hover {
 #mainnav>ul>li.current-menu-item>a,
 #mainnav>ul>li.current-menu-parent>a,
 #mainnav>ul>li>a:hover,
-.blog-single .entry-content .icon-list li:before,
-article .themesflat-btn-blog i {
+.blog-single .entry-content .icon-list li:before {
     color: var(--theme-secondary-color);
     color: var(--theme-secondary-color)
 }
@@ -1691,7 +1690,7 @@ article .themesflat-btn-blog i {
 
 #mainnav>ul>li.menu-item-has-children>a::after {
     font-family: healingy;
-    content: "\e923";
+    content: "\e924";
     font-weight: 100;
     font-size: 8px;
     display: inline-block;
@@ -2593,8 +2592,8 @@ article .content-post {
 }
 
 article .themesflat-btn-blog i {
-    font-size: 9px;
-    margin-left: 10px;
+    font-size: 14px;
+    margin-left: 6px;
     font-weight: 700
 }
 
@@ -3064,12 +3063,6 @@ article .featured-post img {
     border-top: 1px solid #ececec
 }
 
-.blog-list article,
-.blog-single .entry-content .content-2,
-.blog-single .text-2,
-.item article {
-    margin-bottom: 42px
-}
 
 .blog-grid article {
     margin-bottom: 45px
@@ -9464,4 +9457,10 @@ button:hover {
 
 .shape-slider {
     clip-path: polygon(0 0, 100% 0, 100% 91%, 50% 100%, 0 91%)
+}
+/*blog*/
+.wrap-blog-article.blog-archive.blog-two-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 30px;
 }
