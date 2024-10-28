@@ -13,22 +13,7 @@ $header_infor_phone = themesflat_get_opt('header_infor_phone');
 if (themesflat_get_opt_elementor('header_infor_phone') != '') {
     $header_infor_phone = themesflat_get_opt_elementor('header_infor_phone');
 }
-$topbar_address_label = themesflat_get_opt('topbar_address_label');
-if (themesflat_get_opt_elementor('topbar_address_label') != '') {
-    $topbar_address_label = themesflat_get_opt_elementor('topbar_address_label');
-}
-$topbar_address = themesflat_get_opt('topbar_address');
-if (themesflat_get_opt_elementor('topbar_address') != '') {
-    $topbar_address = themesflat_get_opt_elementor('topbar_address');
-}
-$topbar_address_title = themesflat_get_opt('topbar_address_title');
-if (themesflat_get_opt_elementor('topbar_address_title') != '') {
-    $topbar_address_title = themesflat_get_opt_elementor('topbar_address_title');
-}
-$topbar_email_label = themesflat_get_opt('topbar_email_label');
-if (themesflat_get_opt_elementor('topbar_email_label') != '') {
-    $topbar_email_label = themesflat_get_opt_elementor('topbar_email_label');
-}
+
 $topbar_email = themesflat_get_opt('topbar_email');
 if (themesflat_get_opt_elementor('topbar_email') != '') {
     $topbar_email = themesflat_get_opt_elementor('topbar_email');
@@ -37,10 +22,7 @@ $topbar_email_title = themesflat_get_opt('topbar_email_title');
 if (themesflat_get_opt_elementor('topbar_email_title') != '') {
     $topbar_email_title = themesflat_get_opt_elementor('topbar_email_title');
 }
-$header_info_phone_icon = themesflat_get_opt('header_info_phone_icon');
-if (themesflat_get_opt_elementor('header_info_phone_icon') != '') {
-    $header_info_phone_icon = themesflat_get_opt_elementor('header_info_phone_icon');
-}
+
 $header_info_phone_number = themesflat_get_opt('header_info_phone_number');
 if (themesflat_get_opt_elementor('header_info_phone_number') != '') {
     $header_info_phone_number = themesflat_get_opt_elementor('header_info_phone_number');
@@ -48,6 +30,18 @@ if (themesflat_get_opt_elementor('header_info_phone_number') != '') {
 $header_info_phone_number_title = themesflat_get_opt('header_info_phone_number_title');
 if (themesflat_get_opt_elementor('header_info_phone_number_title') != '') {
     $header_info_phone_number_title = themesflat_get_opt_elementor('header_info_phone_number_title');
+}
+
+$header_button = themesflat_get_opt('header_button');
+if (themesflat_get_opt_elementor('header_button') != '') {
+    $header_button = themesflat_get_opt_elementor('header_button');
+}
+$header_button_text = themesflat_get_opt('header_button_text');
+$header_button_url = themesflat_get_opt('header_button_url');
+
+$social_header = themesflat_get_opt('social_header');
+if (themesflat_get_opt_elementor('social_header') != '') {
+    $social_header = themesflat_get_opt_elementor('social_header');
 }
 ?>
 <?php get_template_part( 'tpl/topbar'); ?>
@@ -58,15 +52,8 @@ if (themesflat_get_opt_elementor('header_info_phone_number_title') != '') {
                 <div class="col-md-12">
                     <div class="header-wrap clearfix">
                         <div class="header-ct-left">
-                            <?php get_template_part( 'tpl/header/brand'); ?>
-                        </div>
-                        <div class="header-ct-right">
-
-                            <?php if ($header_info_phone_icon != '' || $header_info_phone_number != '' || $header_info_phone_number_title != '') : ?>
+                        <?php if ($header_info_phone_number != '' || $header_info_phone_number_title != '') : ?>
                                 <div class="header-info-item info-phone">
-                                    <?php if ($header_info_phone_icon != '') : ?>
-                                        <span class="info-label"><?php echo wp_kses($header_info_phone_icon, themesflat_kses_allowed_html()); ?></span>
-                                    <?php endif; ?>
                                     <div class="content">
                                     <?php if ($header_info_phone_number_title != '') : ?>
                                     <div class="title"><?php echo esc_attr($header_info_phone_number_title); ?></div> 
@@ -78,11 +65,8 @@ if (themesflat_get_opt_elementor('header_info_phone_number_title') != '') {
                                 </div>
                             <?php endif; ?>
 
-                            <?php if ($topbar_email_label != '' || $topbar_email != '' || $topbar_email_title != '') : ?>
+                            <?php if ($topbar_email != '' || $topbar_email_title != '') : ?>
                                 <div class="header-info-item info-phone">
-                                    <?php if ($topbar_email_label != '') : ?>
-                                        <span class="info-label"><?php echo wp_kses($topbar_email_label, themesflat_kses_allowed_html()); ?></span>
-                                    <?php endif; ?>
                                     <div class="content">
                                     <?php if ($topbar_email_title != '') : ?>
                                     <div class="title"><?php echo esc_attr($topbar_email_title); ?></div> 
@@ -93,22 +77,16 @@ if (themesflat_get_opt_elementor('header_info_phone_number_title') != '') {
                                     </div>
                                 </div>
                             <?php endif; ?>
-
-                            <?php if ($topbar_address_label != '' || $topbar_address != '' || $topbar_address_title != '') : ?>
-                                <div class="header-info-item info-phone">
-                                    <?php if ($topbar_address_label != '') : ?>
-                                        <span class="info-label"><?php echo wp_kses($topbar_address_label, themesflat_kses_allowed_html()); ?></span>
-                                    <?php endif; ?>
-                                    <div class="content">
-                                    <?php if ($topbar_address_title != '') : ?>
-                                    <div class="title"><?php echo esc_attr($topbar_address_title); ?></div> 
-                                    <?php endif; ?>
-                                    <?php if ($topbar_address != '') : ?>
-                                        <span class="info-content"><?php echo esc_attr($topbar_address); ?></span>
-                                    <?php endif; ?>
-                                    </div>
-                                </div>
-                            <?php endif; ?>
+                            
+                        </div>
+                        <div class="header-ct-center">
+                            <?php get_template_part( 'tpl/header/brand'); ?>
+                        </div>                      
+                        <div class="header-ct-right">                         
+                            <?php if ( $social_header == 1 ):
+                                themesflat_render_social();    
+                            endif;
+                            ?>
 
                             <div class="btn-menu">
                                 <span class="line-1"></span>
@@ -130,25 +108,29 @@ if (themesflat_get_opt_elementor('header_info_phone_number_title') != '') {
                                 <?php get_template_part( 'tpl/header/navigator'); ?>
                             </div>
                         </div>
-                    <?php if( $header_search_box == 1 || $header_sidebar_toggler == 1 || $header_infor_phone == 1): ?>
+                        <?php if( $header_button == 1 || $header_search_box == 1 || $header_sidebar_toggler == 1): ?>
                         <div class="header-ct-right">
-                        <?php if ( $header_search_box == 1 ) :?>
-                                <div class="show-search">
-                                    <a href="#"><i class="icon-healingy-search"></i></a> 
-                                    <div class="submenu top-search widget_search">
-                                        <?php get_search_form(); ?>
-                                    </div>        
-                                </div> 
-                        <?php endif;?>
-                        <?php if ( $header_sidebar_toggler == 1 ) :?>
+                            <?php if ( $header_search_box == 1 ) :?>
+                            <div class="show-search">
+                                <a href="#"><i class="icon-healingy-search"></i></a>
+                                <div class="submenu top-search widget_search">
+                                    <?php get_search_form(); ?>
+                                </div>
+                            </div>
+                            <?php endif;?>
+                            <?php if ( $header_sidebar_toggler == 1 ) :?>
                             <div class="header-modal-menu-left-btn">
                                 <div class="modal-menu-left-btn">
-                                <i class="icon-healingy-settings"></i>
+                                    <i class="icon-healingy-settings"></i>
                                 </div>
                             </div><!-- /.header-modal-menu-left-btn -->
-                        <?php endif;?>
-                            </div>
-                    <?php endif; ?>
+                            <?php endif;?>
+                            <?php if ( $header_button == 1 ) :?>
+                            <a href="<?php echo get_permalink ( get_theme_mod ( 'header_button_url' )); ?>"
+                                class="tf-btn <?php if(!is_user_logged_in()) echo 'display-pop-login'; ?>"><span><?php echo wp_kses($header_button_text, themesflat_kses_allowed_html()); ?></span></a>
+                            <?php endif;?>
+                        </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

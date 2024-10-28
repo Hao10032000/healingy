@@ -270,7 +270,7 @@ function themesflat_available_social_icons() {
     $icons = apply_filters( 'themesflat_available_icons', array(
         'twitter'        => array( 'iclass' => 'icon-healingy-twitter', 'title' => 'Twitter','share_link' => THEMESFLAT_PROTOCOL . '://twitter.com/intent/tweet?url=' ),
         'facebook'       => array( 'iclass' => 'icon-healingy-facebook', 'title' => 'Facebook','share_link'=> THEMESFLAT_PROTOCOL . '://www.facebook.com/sharer/sharer.php?u=' ),
-        'google-plus-g'    => array( 'iclass' => 'icon-healingy-google-plus', 'title' => 'Google Plus','share_link'=> THEMESFLAT_PROTOCOL . '://plus.google.com/share?url=' ),
+        'google-plus-g'  => array( 'iclass' => 'icon-healingy-chat', 'title' => 'Chat','share_link'=> THEMESFLAT_PROTOCOL . '://plus.google.com/share?url=' ),
         'pinterest'      => array( 'iclass' => 'icon-healingy-pinterest', 'title' => 'Pinterest','share_link' => THEMESFLAT_PROTOCOL . '://pinterest.com/pin/create/bookmarklet/?url=' ),
         'instagram'      => array( 'iclass' => 'icon-healingy-instagram', 'title' => 'Instagram','share_link' => 'https://www.instagram.com/?url=' ),
         'youtube'        => array( 'iclass' => 'icon-healingy-youtube', 'title' => 'Youtube','share_link' =>'' ),

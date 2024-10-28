@@ -9,17 +9,9 @@
     #mainnav ul.sub-menu:before {
         left: 110px;
     }
-    #header.header.header-default .inner-header,
-    .header-default .themesflat-top.style-01,
-    .themesflat-top.default .container {
-        padding: 0;
-    }
 }
 @media only screen and (max-width: 1750px) {
-    .header-02 #header,
-    .header-02 .themesflat-top {
-        padding-right: 0;
-    }
+
 }
 @media only screen and (max-width: 1600px) {
     .info-header {

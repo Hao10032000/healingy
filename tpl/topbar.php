@@ -20,10 +20,15 @@ $topbar_address2 = themesflat_get_opt('topbar_address2');
 if (themesflat_get_opt_elementor('topbar_address2') != '') {
     $topbar_address2 = themesflat_get_opt_elementor('topbar_address2');
 }
-$topbar_custom_infor = themesflat_get_opt('topbar_custom_infor');
-if (themesflat_get_opt_elementor('topbar_custom_infor') != '') {
-    $topbar_custom_infor = themesflat_get_opt_elementor('topbar_custom_infor');
+$topbar_address3 = themesflat_get_opt('topbar_address3');
+if (themesflat_get_opt_elementor('topbar_address3') != '') {
+    $topbar_address3 = themesflat_get_opt_elementor('topbar_address3');
 }
+$topbar_address4 = themesflat_get_opt('topbar_address4');
+if (themesflat_get_opt_elementor('topbar_address4') != '') {
+    $topbar_address4 = themesflat_get_opt_elementor('topbar_address4');
+}
+
 $social_topbar = themesflat_get_opt('social_topbar');
 if (themesflat_get_opt_elementor('social_topbar') != '') {
     $social_topbar = themesflat_get_opt_elementor('social_topbar');
@@ -34,47 +39,23 @@ if (themesflat_get_opt_elementor('style_topbar') != '') {
 }
 ?>
 
-    <?php if ( $topbar == 1 ) :?>
-        <?php if ( $style_topbar == 'topbar-01' ) :?>
-            <!-- Topbar -->
-            <div class="themesflat-top style-01 select-2">    
-            <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                <div class="container-inside">
-                    <div class="content-left">
-                        <?php if( $topbar_custom_infor != '' ): ?>
-                        <div class="infor-topbar">
-                            <?php echo $topbar_custom_infor; ?>
-                        </div>
-                        <?php endif; ?>
-                    </div><!-- content-left -->
-                    <div class="content-right">
-                        <?php  
-                            if ( $social_topbar == 1 ):
-                                themesflat_render_social();    
-                            endif;
-                        ?>
-                    </div>
-                </div>
-                </div>
-            </div>
-            </div><!-- /.container -->        
-            </div><!-- /.topbar -->
-            <?php else: ?>
-            <div class="themesflat-top style-01">    
-            <div class="container">
-            <div class="row">
-                <div class="col-md-12">
+<?php if ( $topbar == 1 ) :?>
+<div class="themesflat-top style-01">
+    <div class="container-full">
+        <div class="row">
+            <div class="col-md-12">
                 <div class="container-inside">
                     <div class="content-left">
                         <?php if( $topbar_address2 != '' ): ?>
                         <div class="infor-topbar">
-                            <?php echo esc_attr($topbar_address2); ?>
+                            <span class="list"><?php echo $topbar_address2; ?></span>
+                            <span class="list"><?php echo $topbar_address3; ?></span>
                         </div>
                         <?php endif; ?>
                     </div><!-- content-left -->
                     <div class="content-right">
+                    <span class="list">
+                        <?php echo $topbar_address4; ?></span>
                         <?php  
                             if ( $social_topbar == 1 ):
                                 themesflat_render_social();    
@@ -82,9 +63,8 @@ if (themesflat_get_opt_elementor('style_topbar') != '') {
                         ?>
                     </div>
                 </div>
-                </div>
             </div>
-            </div><!-- /.container -->        
-            </div><!-- /.topbar -->
-        <?php endif; ?>
-    <?php endif; ?>
+        </div>
+    </div><!-- /.container -->
+</div><!-- /.topbar -->
+<?php endif; ?>

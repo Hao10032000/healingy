@@ -86,7 +86,7 @@ echo '<div class="post-meta">';
                 $archive_year  = get_the_time('Y'); 
                 $archive_month = get_the_time('m'); 
                 $archive_day   = get_the_time('d');                 
-                echo '<a class="meta-text" href="'.get_day_link( $archive_year, $archive_month, $archive_day).'">'.get_the_date().'</a>';
+                echo '<a class="meta-text" href="'.get_day_link( $archive_year, $archive_month, $archive_day).'">'.get_the_date('d M ').'</a>';
             echo '</span>';
         }
     endforeach;

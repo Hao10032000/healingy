@@ -68,6 +68,7 @@ class themesflat_options_elementor {
                     'header-default' => esc_html__( 'Header Default', 'healingy'),
                     'header-01' => esc_html__( 'Header 01', 'healingy'),
                     'header-02' => esc_html__( 'Header 02', 'healingy'),
+                    'header-03' => esc_html__( 'Header 03', 'healingy'),
                 ],
             ]
         );
@@ -137,23 +138,6 @@ class themesflat_options_elementor {
                 'condition' => [
                     'topbar_show' => '1',
                     'style_topbar' => 'topbar-default',
-                ],
-            ]
-        );	
-
-        $element->add_control (
-            'topbar_custom_infor',
-            [
-                'label' => esc_html__( 'Top Bar Infor', 'themesflat-core' ),
-                'type' => \Elementor\Controls_Manager::CODE,
-                'label_block' => true,
-                'default' => '<ul class="list-infor-topbar">
-                <li><i class="icon-healingy-ona-49"></i>Call us: +4 509 120 6705</li>
-                <li><i class="icon-healingy-ona-50"></i>Email: hello@support.com</li>
-                <li><i class="icon-healingy-ona-92"></i>Address: Klara Södra 1, 111 52 Stockholm</li>
-            </ul>',
-                'condition' => [
-                    'style_topbar' => 'topbar-01',
                 ],
             ]
         );	
@@ -749,15 +733,7 @@ class themesflat_options_elementor {
             ]
         );
 
-        $element->add_control (
-            'header_info_phone_text',
-            [
-                'label' => esc_html__( 'Heading Infor Contact', 'themesflat-core' ),
-                'type' => \Elementor\Controls_Manager::TEXT,
-                'label_block' => true,
-                'condition' => [ 'style_header!' => 'header-02' ],
-            ]
-        );
+
 
 
         // infor home 2
@@ -801,15 +777,6 @@ class themesflat_options_elementor {
             ]
         );
 
-        $element->add_control (
-            'topbar_address_label',
-            [
-                'label' => esc_html__( 'Address Icon', 'themesflat-core' ),
-                'type' => \Elementor\Controls_Manager::TEXT,
-                'label_block' => true,
-                'condition' => [ 'style_header' => 'header-02' ],
-            ]
-        );
 
         $element->add_control (
             'topbar_address',

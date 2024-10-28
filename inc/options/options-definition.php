@@ -21,20 +21,17 @@ function themesflat_customize_default($key) {
 		'message_link_color_hover' => '',
 		'topbar_show' => 0 ,
 		'header_message' => 0 ,
-		'topbar_address_label' => '<i class="icon-healingy-ona-51"></i>',
-		'topbar_address' => 'Klara Södra 1, 111 52 Stockholm',
-		'topbar_custom_infor' => '
-		<ul class="list-infor-topbar">
-			<li><i class="icon-healingy-ona-49"></i>Call us: +4 509 120 6705</li>
-			<li><i class="icon-healingy-ona-50"></i>Email: hello@support.com</li>
-			<li><i class="icon-healingy-ona-92"></i>Address: Klara Södra 1, 111 52 Stockholm</li>
-		</ul>',
 		'topbar_address_title' => 'Address',
-		'topbar_address2' => 'Klara Södra 1, 111 52 Stockholm',
+
+		'topbar_address2' => '<i class="icon-healingy-map"></i> 101 E 129th St, East Chicago, IN 46312, US',
+		'topbar_address3' => '<i class="icon-healingy-mail"></i> hi.avitex@gmail.com',
+		'topbar_address4' => '<i class="icon-healingy-phone"></i> 1-555-678-8888',
+
 		'topbar_email_label' => '<i class="icon-healingy-ona-50"></i>',
 		'topbar_email' => 'hello@support.com',
 		'topbar_email_title' => 'Support',
 		'social_topbar' => 1,
+		'social_header' => 1,
 		'typography_topbar' => array(
 			'family' => 'Archivo',
 			'style'  => '400',
@@ -57,7 +54,6 @@ function themesflat_customize_default($key) {
 		'header_button'=>1,
 		'header_button_text' => 'Get Your Consult!',
 		'header_button_url' => '',
-		'header_info_phone_text' => '',
 		'header_info_phone_icon' => '<i class="icon-healingy-ona-49"></i>',
 		'header_info_phone_number' => '',
 		'header_info_phone_number_title' => 'Call us',

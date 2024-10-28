@@ -25,6 +25,10 @@ $wp_customize->add_control( new themesflat_RadioImages($wp_customize,
             ),
             'header-02' => array (
                 'tooltip'   => esc_html__( 'Header 02','healingy' ),
+                'src'       => THEMESFLAT_LINK . 'images/controls/header-02.jpg'
+            ),
+            'header-03' => array (
+                'tooltip'   => esc_html__( 'Header 03','healingy' ),
                 'src'       => THEMESFLAT_LINK . 'images/controls/header-03.jpg'
             ),
         ),
@@ -119,9 +123,29 @@ $wp_customize->add_setting(
           'section' => 'section_options',
           'priority' => 6,
           'active_callback' => function () use ( $wp_customize ) {
-            return 'header-default' != $wp_customize->get_setting( 'style_header' )->value();
-            return 'header-02' != $wp_customize->get_setting( 'style_header' )->value();
+            return 'header-02' == $wp_customize->get_setting( 'style_header' )->value();
         }, 
+      ))
+  );
+
+  // Social Header
+$wp_customize->add_setting(
+    'social_header',
+      array(
+          'sanitize_callback' => 'themesflat_sanitize_checkbox',
+          'default' => themesflat_customize_default('social_header'),     
+      )   
+  );
+  $wp_customize->add_control( new themesflat_Checkbox( $wp_customize,
+      'social_header',
+      array(
+          'type' => 'checkbox',
+          'label' => esc_html__('Social ( OFF | ON )', 'healingy'),
+          'section' => 'section_options',
+          'priority' => 7,
+          'active_callback' => function () use ( $wp_customize ) {
+            return 'header-02' == $wp_customize->get_setting( 'style_header' )->value();
+          } 
       ))
   );
 
@@ -143,50 +167,6 @@ $wp_customize->add_setting(
 ) )
 );
 
-// Phone Label
-$wp_customize->add_setting(
-    'header_info_phone_text',
-    array(
-        'default' => themesflat_customize_default('header_info_phone_text'),
-        'sanitize_callback' => 'themesflat_sanitize_text'
-    )
-);
-$wp_customize->add_control(
-    'header_info_phone_text',
-    array(
-        'label' => esc_html__( 'Phone Label', 'healingy' ),
-        'section' => 'section_options',
-        'type' => 'text',
-        'priority' => 8,
-        'active_callback' => function () use ( $wp_customize ) {
-            $condition1 = $wp_customize->get_setting( 'header_infor_phone' )->value();
-            $condition2    = $wp_customize->get_setting( 'style_header' )->value();      
-            return 'header-default' != $wp_customize->get_setting( 'style_header' )->value();
-        },
-    )
-);
-
-
-// Phone Label2
-$wp_customize->add_setting(
-    'header_info_phone_icon',
-    array(
-        'default' => themesflat_customize_default('header_info_phone_icon'),
-        'sanitize_callback' => 'themesflat_sanitize_text'
-    )
-);
-$wp_customize->add_control(
-    'header_info_phone_icon',
-    array(
-        'label' => esc_html__( 'Phone Icon', 'healingy' ),
-        'section' => 'section_options',
-        'type' => 'text',
-        'priority' => 9,
-        'active_callback' => function () use ( $wp_customize ) {
-            return 'header-02' === $wp_customize->get_setting( 'style_header' )->value();
-        }, 
-    )
-);
 
 // Phone Number title
 $wp_customize->add_setting(
@@ -227,7 +207,7 @@ $wp_customize->add_control(
         'active_callback' => function () use ( $wp_customize ) {
             $condition1 = $wp_customize->get_setting( 'header_infor_phone' )->value();
             $condition2    = $wp_customize->get_setting( 'style_header' )->value();
-            return 'header-default' != $wp_customize->get_setting( 'style_header' )->value();
+            return 'header-02' == $wp_customize->get_setting( 'style_header' )->value();
         },
     )
 );
@@ -243,26 +223,6 @@ $wp_customize->add_control( new themesflat_Info( $wp_customize, 'header_info_lab
 ) )
 );
 
-// Email Label
-$wp_customize->add_setting(
-    'topbar_email_label',
-    array(
-        'default' => themesflat_customize_default('topbar_email_label'),
-        'sanitize_callback' => 'themesflat_sanitize_text'
-    )
-);
-$wp_customize->add_control(
-    'topbar_email_label',
-    array(
-        'label' => esc_html__( 'Email Icon', 'healingy' ),
-        'section' => 'section_options',
-        'type' => 'text',
-        'priority' => 12,
-        'active_callback' => function () use ( $wp_customize ) {
-            return 'header-02' === $wp_customize->get_setting( 'style_header' )->value();
-        }, 
-    )
-);
 
 // Email Title
 $wp_customize->add_setting(
@@ -305,81 +265,6 @@ $wp_customize->add_control(
         }, 
     )
 );
-
-$wp_customize->add_control( new themesflat_Info( $wp_customize, 'header_info_label_address', array(
-    'label'    => esc_html__( 'Address', 'maine' ),
-    'section'  => 'section_options',
-    'settings' => 'themesflat_options[info]',
-    'priority' => 14,
-    'active_callback' => function () use ( $wp_customize ) {
-        return 'header-02' === $wp_customize->get_setting( 'style_header' )->value();
-    }, 
-) )
-);
-
-// address Label
-$wp_customize->add_setting(
-    'topbar_address_label',
-    array(
-        'default' => themesflat_customize_default('topbar_address_label'),
-        'sanitize_callback' => 'themesflat_sanitize_text'
-    )
-);
-$wp_customize->add_control(
-    'topbar_address_label',
-    array(
-        'label' => esc_html__( 'Address Icon', 'healingy' ),
-        'section' => 'section_options',
-        'type' => 'text',
-        'priority' => 15,
-        'active_callback' => function () use ( $wp_customize ) {
-            return 'header-02' === $wp_customize->get_setting( 'style_header' )->value();
-        }, 
-    )
-);
-
-// address Title
-$wp_customize->add_setting(
-    'topbar_address_title',
-    array(
-        'default' => themesflat_customize_default('topbar_address_title'),
-        'sanitize_callback' => 'themesflat_sanitize_text'
-    )
-);
-$wp_customize->add_control(
-    'topbar_address_title',
-    array(
-        'label' => esc_html__( 'Address Title', 'healingy' ),
-        'section' => 'section_options',
-        'type' => 'text',
-        'priority' => 16,
-        'active_callback' => function () use ( $wp_customize ) {
-            return 'header-02' === $wp_customize->get_setting( 'style_header' )->value();
-        }, 
-    )
-);
-
-// address Label2
-$wp_customize->add_setting(
-    'topbar_address',
-    array(
-        'default' => themesflat_customize_default('topbar_address'),
-        'sanitize_callback' => 'themesflat_sanitize_text'
-    )
-);
-$wp_customize->add_control(
-    'topbar_address',
-    array(
-        'label' => esc_html__( 'Address Infor', 'healingy' ),
-        'section' => 'section_options',
-        'type' => 'text',
-        'priority' => 16,
-        'active_callback' => function () use ( $wp_customize ) {
-            return 'header-02' === $wp_customize->get_setting( 'style_header' )->value();
-        }, 
-    )
-);
-
 
 // button
 $wp_customize->add_control( new themesflat_Info( $wp_customize, 'header_button_label', array(

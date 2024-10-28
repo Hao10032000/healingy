@@ -28,7 +28,7 @@ if (themesflat_get_opt_elementor('header_info_phone_number') != '') {
 <?php get_template_part( 'tpl/topbar'); ?>
 <header id="header" class="header header-default <?php echo themesflat_get_opt_elementor('extra_classes_header'); ?>">
     <div class="inner-header">
-        <div class="container">
+        <div class="container-full">
             <div class="row">
                 <div class="col-md-12">
                     <div class="header-wrap clearfix">
@@ -42,6 +42,10 @@ if (themesflat_get_opt_elementor('header_info_phone_number') != '') {
                         </div>
                         <?php if( $header_button == 1 || $header_search_box == 1 || $header_sidebar_toggler == 1): ?>
                         <div class="header-ct-right">
+                            <?php if ( $header_button == 1 ) :?>
+                            <a href="<?php echo get_permalink ( get_theme_mod ( 'header_button_url' )); ?>"
+                                class="tf-btn <?php if(!is_user_logged_in()) echo 'display-pop-login'; ?>"><span><?php echo wp_kses($header_button_text, themesflat_kses_allowed_html()); ?></span></a>
+                            <?php endif;?>
                             <?php if ( $header_search_box == 1 ) :?>
                             <div class="show-search">
                                 <a href="#"><i class="icon-healingy-search"></i></a>
@@ -57,10 +61,7 @@ if (themesflat_get_opt_elementor('header_info_phone_number') != '') {
                                 </div>
                             </div><!-- /.header-modal-menu-left-btn -->
                             <?php endif;?>
-                            <?php if ( $header_button == 1 ) :?>
-                            <a href="<?php echo get_permalink ( get_theme_mod ( 'header_button_url' )); ?>"
-                                class="tf-btn <?php if(!is_user_logged_in()) echo 'display-pop-login'; ?>"><span><?php echo wp_kses($header_button_text, themesflat_kses_allowed_html()); ?></span></a>
-                            <?php endif;?>
+
                         </div>
                         <?php endif; ?>
                         <div class="btn-menu">
