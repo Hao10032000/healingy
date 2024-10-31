@@ -53,7 +53,7 @@ if (class_exists('WP_Customize_Control')) {
 						<span class="input-title"></span>
 						<input type="text" class="input-field" />
 					</label>
-					<button type="button" class="button button-primary confirm"><i class="icon-healingy-ona-21"></i></button>
+					<button type="button" class="button button-primary confirm"><i class="icon-healingy-Plus"></i></button>
 				</li>
 
 				<?php foreach ( $order as $id ):

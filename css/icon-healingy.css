@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'healingy';
   src:
-    url('../fonts/healingy.ttf?9ayo48') format('truetype'),
-    url('../fonts/healingy.woff?9ayo48') format('woff'),
-    url('../fonts/healingy.svg?9ayo48#healingy') format('svg');
+    url('../fonts/healingy.ttf?i490cz') format('truetype'),
+    url('../fonts/healingy.woff?i490cz') format('woff'),
+    url('../fonts/healingy.svg?i490cz#healingy') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,6 +24,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-healingy-slack:before {
+  content: "\e928";
+  color: #4a154b;
+}
 .icon-healingy-cart:before {
   content: "\e900";
 }
@@ -110,4 +114,46 @@
 }
 .icon-healingy-user:before {
   content: "\e925";
+}
+.icon-healingy-dribbble:before {
+  content: "\e929";
+}
+.icon-healingy-steam:before {
+  content: "\e92a";
+}
+.icon-healingy-stackoverflow:before {
+  content: "\e92b";
+}
+.icon-healingy-spotify:before {
+  content: "\e92c";
+}
+.icon-healingy-behance:before {
+  content: "\e92d";
+}
+.icon-healingy-vimeo:before {
+  content: "\e92e";
+}
+.icon-healingy-youtube:before {
+  content: "\e92f";
+}
+.icon-healingy-pinterest:before {
+  content: "\e930";
+}
+.icon-healingy-thumb-tack:before {
+  content: "\e931";
+}
+.icon-healingy-toggle-on:before {
+  content: "\e932";
+}
+.icon-healingy-toggle-off:before {
+  content: "\e933";
+}
+.icon-healingy-digg:before {
+  content: "\e934";
+}
+.icon-healingy-bitcoin:before {
+  content: "\e935";
+}
+.icon-healingy-google-plus:before {
+  content: "\e936";
 }

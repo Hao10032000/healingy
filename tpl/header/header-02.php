@@ -43,46 +43,67 @@ $social_header = themesflat_get_opt('social_header');
 if (themesflat_get_opt_elementor('social_header') != '') {
     $social_header = themesflat_get_opt_elementor('social_header');
 }
+
+$topbar_address2 = themesflat_get_opt('topbar_address2');
+if (themesflat_get_opt_elementor('topbar_address2') != '') {
+    $topbar_address2 = themesflat_get_opt_elementor('topbar_address2');
+}
+$topbar_address3 = themesflat_get_opt('topbar_address3');
+if (themesflat_get_opt_elementor('topbar_address3') != '') {
+    $topbar_address3 = themesflat_get_opt_elementor('topbar_address3');
+}
+$topbar_address4 = themesflat_get_opt('topbar_address4');
+if (themesflat_get_opt_elementor('topbar_address4') != '') {
+    $topbar_address4 = themesflat_get_opt_elementor('topbar_address4');
+}
+
+$social_topbar = themesflat_get_opt('social_topbar');
+if (themesflat_get_opt_elementor('social_topbar') != '') {
+    $social_topbar = themesflat_get_opt_elementor('social_topbar');
+}
+
+
 ?>
+
 <?php get_template_part( 'tpl/topbar'); ?>
 <header id="header" class="header header-02 <?php echo themesflat_get_opt_elementor('extra_classes_header'); ?>">
-    <div class="inner-header">  
+    <div class="inner-header">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="header-wrap clearfix">
                         <div class="header-ct-left">
-                        <?php if ($header_info_phone_number != '' || $header_info_phone_number_title != '') : ?>
-                                <div class="header-info-item info-phone">
-                                    <div class="content">
+                            <?php if ($header_info_phone_number != '' || $header_info_phone_number_title != '') : ?>
+                            <div class="header-info-item info-phone">
+                                <div class="content">
                                     <?php if ($header_info_phone_number_title != '') : ?>
-                                    <div class="title"><?php echo esc_attr($header_info_phone_number_title); ?></div> 
+                                    <div class="title"><?php echo esc_attr($header_info_phone_number_title); ?></div>
                                     <?php endif; ?>
                                     <?php if ($header_info_phone_number != '') : ?>
-                                        <span class="info-content"><?php echo esc_attr($header_info_phone_number); ?></span>
+                                    <span class="info-content"><?php echo esc_attr($header_info_phone_number); ?></span>
                                     <?php endif; ?>
-                                    </div>
                                 </div>
+                            </div>
                             <?php endif; ?>
 
                             <?php if ($topbar_email != '' || $topbar_email_title != '') : ?>
-                                <div class="header-info-item info-phone">
-                                    <div class="content">
+                            <div class="header-info-item info-phone">
+                                <div class="content">
                                     <?php if ($topbar_email_title != '') : ?>
-                                    <div class="title"><?php echo esc_attr($topbar_email_title); ?></div> 
+                                    <div class="title"><?php echo esc_attr($topbar_email_title); ?></div>
                                     <?php endif; ?>
                                     <?php if ($topbar_email != '') : ?>
-                                        <span class="info-content"><?php echo esc_attr($topbar_email); ?></span>
+                                    <span class="info-content"><?php echo esc_attr($topbar_email); ?></span>
                                     <?php endif; ?>
-                                    </div>
                                 </div>
+                            </div>
                             <?php endif; ?>
-                            
+
                         </div>
                         <div class="header-ct-center">
                             <?php get_template_part( 'tpl/header/brand'); ?>
-                        </div>                      
-                        <div class="header-ct-right">                         
+                        </div>
+                        <div class="header-ct-right">
                             <?php if ( $social_header == 1 ):
                                 themesflat_render_social();    
                             endif;
@@ -92,7 +113,7 @@ if (themesflat_get_opt_elementor('social_header') != '') {
                                 <span class="line-1"></span>
                             </div><!-- //mobile menu button -->
                         </div>
-                    </div>                
+                    </div>
                 </div><!-- /.col-md-12 -->
             </div><!-- /.row -->
         </div><!-- /.container -->
@@ -138,14 +159,27 @@ if (themesflat_get_opt_elementor('social_header') != '') {
     </div>
 
     <div class="canvas-nav-wrap">
-        <div class="overlay-canvas-nav"><div class="canvas-menu-close"><span></span></div></div>
+        <div class="overlay-canvas-nav">
+            <div class="canvas-menu-close"><span></span></div>
+        </div>
         <div class="inner-canvas-nav">
             <?php get_template_part( 'tpl/header/brand-mobile'); ?>
             <nav id="mainnav_canvas" class="mainnav_canvas" role="navigation">
                 <?php
                     wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => 'themesflat_menu_fallback', 'container' => false ) );
                 ?>
-            </nav><!-- #mainnav_canvas -->  
+            </nav><!-- #mainnav_canvas -->
+            <?php if( $topbar_address2 != '' ): ?>
+            <div class="infor-topbar">
+                <span class="list"><?php echo $topbar_address2; ?></span>
+                <span class="list"><?php echo $topbar_address3; ?></span>
+                <span class="list"><?php echo $topbar_address4; ?></span>
+            </div>
+            <?php endif; ?>
+            <?php if ( $social_topbar == 1 ):
+                themesflat_render_social();    
+                endif;
+            ?>
         </div>
-    </div><!-- /.canvas-nav-wrap --> 
-</header><!-- /.header --> 
+    </div><!-- /.canvas-nav-wrap -->
+</header><!-- /.header -->

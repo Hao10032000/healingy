@@ -235,6 +235,12 @@
 [data-link].flat-steam {
     background: #2c4762;
 }
+[data-link].flat-chat {
+    background: #2c4762;
+}
+[data-link].flat-paper-plane {
+    background: #2c4762;
+}
 [data-link].flat-twitter {
     background: #55acee;
 }

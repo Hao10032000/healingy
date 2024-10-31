@@ -26,8 +26,16 @@
     }
 }
 @media only screen and (max-width: 1440px) {
+    .themesflat-top.style-01 {
+        padding-left: 15px;
+        padding-right: 10px;
+    }
+    .header-01 .header-wrap {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
     #mainnav > ul > li {
-        margin: 0 5px;
+        margin: 0 10px;
     }
 }
 @media only screen and (max-width: 1366px) {
@@ -37,6 +45,13 @@
     }
 }
 @media only screen and (max-width: 1320px) {
+    #footer .wrap-widgets-1 {
+        padding-right: 3em;
+    }
+    #footer .wrap-widgets-2 {
+        padding-left: 3em;
+    }
+
     #header .header-wrap .nav-wrap {
         margin: 0 15px;
     }
@@ -82,9 +97,6 @@
         padding: 0;
         border: unset;
     }
-    #mainnav > ul > li > a {
-        padding: 3px 10px;
-    }
     .single .entry-footer .tags-links a {
         margin-bottom: 10px;
     }
@@ -96,6 +108,9 @@
     }
 }
 @media only screen and (max-width: 1150px) {
+    #header .header-wrap .header-ct-right .tf-btn {
+        display: none;
+    }
     #header.header-style1 .logo {
         min-width: unset;
         min-height: unset;
@@ -158,11 +173,20 @@
     }
 }
 @media only screen and (max-width: 991px) {
-    #footer,
+
+    .themesflat-top.style-01 ,#header.header-01 .header-wrap .header-ct-center,.header-02 .header-ct-right .themesflat-socials{
+        display: none;
+    }
+    #footer .wrap-widgets-1 {
+        padding-right: 0em;
+    }
+    #footer .wrap-widgets-2 {
+        padding-left: 0em;
+    }
+
     #themesflat-content {
         padding-top: 70px;
     }
-    #footer,
     .blog #themesflat-content,
     .error404 #themesflat-content,
     .single-post #themesflat-content,
@@ -469,6 +493,18 @@
     }
 }
 @media only screen and (max-width: 767px) {
+     .blog .page-title.default .page-title-heading {
+        margin-bottom: 1px;
+        font-size: 35px;
+    }
+    .page-title {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    #footer .wrap-widgets-2 {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
     .btn-video {
         padding-left: 65px;
     }
@@ -509,11 +545,6 @@
     .mobi-mb20,
     .themesflat-action-box .heading-wrap {
         margin-bottom: 20px;
-    }
-    .footer-widgets .wrap-widgets-1,
-    .footer-widgets .wrap-widgets-2,
-    .footer-widgets .wrap-widgets-3 > .widget:last-child {
-        margin-bottom: 60px;
     }
     .comment-respond .comment-left .email-container,
     .comment-respond .comment-left .name-container,
@@ -830,7 +861,7 @@
         border: none;
     }
     .go-top {
-        bottom: 200px;
+        bottom: 100px;
     }
     .go-top i {
         line-height: 40px;

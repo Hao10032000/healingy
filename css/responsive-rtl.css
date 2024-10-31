@@ -13,7 +13,7 @@
 /* Smaller than standard 1440 */
 @media only screen and (max-width: 1440px) {
 	#mainnav > ul > li {
-	    margin: 0 15px;
+	    margin: 0 10px;
 	}
 
 	.themesflat-top.topbar-style2.tf-topbar-stretch:before {
@@ -529,6 +529,18 @@
 
 /* All Mobile Sizes */
 @media only screen and (max-width: 767px) {	
+	article .featured-post img {
+		height: auto;
+
+	}
+	.page-title {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	 .blog .page-title.default .page-title-heading {
+		margin-bottom: 1px;
+		font-size: 35px;
+	}
 	.themesflat-top .container-inside .content-left, 
 	.themesflat-top .container-inside .content-right {
 		display: block;

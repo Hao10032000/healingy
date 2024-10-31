@@ -24,6 +24,24 @@ $header_info_phone_number = themesflat_get_opt('header_info_phone_number');
 if (themesflat_get_opt_elementor('header_info_phone_number') != '') {
     $header_info_phone_number = themesflat_get_opt_elementor('header_info_phone_number');
 }
+
+$topbar_address2 = themesflat_get_opt('topbar_address2');
+if (themesflat_get_opt_elementor('topbar_address2') != '') {
+    $topbar_address2 = themesflat_get_opt_elementor('topbar_address2');
+}
+$topbar_address3 = themesflat_get_opt('topbar_address3');
+if (themesflat_get_opt_elementor('topbar_address3') != '') {
+    $topbar_address3 = themesflat_get_opt_elementor('topbar_address3');
+}
+$topbar_address4 = themesflat_get_opt('topbar_address4');
+if (themesflat_get_opt_elementor('topbar_address4') != '') {
+    $topbar_address4 = themesflat_get_opt_elementor('topbar_address4');
+}
+
+$social_topbar = themesflat_get_opt('social_topbar');
+if (themesflat_get_opt_elementor('social_topbar') != '') {
+    $social_topbar = themesflat_get_opt_elementor('social_topbar');
+}
 ?>
 <?php get_template_part( 'tpl/topbar'); ?>
 <header id="header" class="header header-default <?php echo themesflat_get_opt_elementor('extra_classes_header'); ?>">
@@ -84,6 +102,17 @@ if (themesflat_get_opt_elementor('header_info_phone_number') != '') {
                     wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => 'themesflat_menu_fallback', 'container' => false ) );
                 ?>
             </nav><!-- #mainnav_canvas -->
+            <?php if( $topbar_address2 != '' ): ?>
+            <div class="infor-topbar">
+                <span class="list"><?php echo $topbar_address2; ?></span>
+                <span class="list"><?php echo $topbar_address3; ?></span>
+                <span class="list"><?php echo $topbar_address4; ?></span>
+            </div>
+            <?php endif; ?>
+            <?php if ( $social_topbar == 1 ):
+                themesflat_render_social();    
+                endif;
+            ?>
         </div>
     </div><!-- /.canvas-nav-wrap -->
 </header><!-- /.header -->

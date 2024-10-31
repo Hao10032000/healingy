@@ -32,7 +32,7 @@ if (class_exists('WP_Customize_Control')) {
 						if ( $label ) : ?>
 							<li data-value="<?php echo esc_attr( $val ); ?>" class="themesflat-sortable-li">
 								<?php echo esc_html( $label ); ?>
-								<span class="themesflat-hide-sortee fa icon-healingy-ona-14"></span>
+								<span class="themesflat-hide-sortee fa icon-healingy-toggle-on"></span>
 							</li>
 						<?php
 						endif;						
@@ -41,7 +41,7 @@ if (class_exists('WP_Customize_Control')) {
 					foreach ( $choices as $val => $label ) { ?>
 						<li data-value="<?php echo esc_attr( $val ); ?>" class="themesflat-sortable-li themesflat-hide">
 							<?php echo esc_html( $label ); ?>
-							<span class="themesflat-hide-sortee fa icon-healingy-ona-14 icon-healingy-ona-13"></span>
+							<span class="themesflat-hide-sortee fa icon-healingy-toggle-on icon-healingy-toggle-off"></span>
 						</li>
 					<?php } ?>
 				</ul>
@@ -66,7 +66,7 @@ if (class_exists('WP_Customize_Control')) {
 					});					
 					sortableUl.find( 'li' ).each( function() {
 						$( this ).find( '.themesflat-hide-sortee' ).on('click', function() {
-							$( this ).toggleClass( 'icon-healingy-ona-13' ).parents( 'li:eq(0)' ).toggleClass( 'themesflat-hide' );
+							$( this ).toggleClass( 'icon-healingy-toggle-off' ).parents( 'li:eq(0)' ).toggleClass( 'themesflat-hide' );
 						} );
 					});					
 					$( '#<?php echo esc_html( $this->id ); ?>_sortable span.themesflat-hide-sortee' ).on( 'click', function() {

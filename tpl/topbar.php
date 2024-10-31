@@ -54,8 +54,7 @@ if (themesflat_get_opt_elementor('style_topbar') != '') {
                         <?php endif; ?>
                     </div><!-- content-left -->
                     <div class="content-right">
-                    <span class="list">
-                        <?php echo $topbar_address4; ?></span>
+                        <span class="list"><?php echo $topbar_address4; ?></span>
                         <?php  
                             if ( $social_topbar == 1 ):
                                 themesflat_render_social();    
