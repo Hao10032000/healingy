@@ -3172,7 +3172,8 @@ article .featured-post .post-meta {
 .featured-post a,
 .page-template-blog article .featured-post a {
     position: relative;
-    display: inline-block
+    display: inline-block;
+    width: 100%;
 }
 
 .blog-list .blog-post .featured-post a {

@@ -230,7 +230,7 @@
     height: 8px;
     background-color: #fff;
     border: 1px solid var(--theme-primary-color);
-    margin-right: 21px;
+    margin: 0px 10px;
     border-radius: 99px;
     display: block;
     -webkit-transition: opacity .2s ease;
