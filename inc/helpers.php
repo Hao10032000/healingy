@@ -936,16 +936,12 @@ function themesflat_change_archive_titles($orig_title) {
         
     $types = array(
         array(
-            'post_type' => 'portfolios', 
-            'title' => themesflat_get_opt('portfolio_name')
+            'post_type' => 'therapists', 
+            'title' => themesflat_get_opt('therapists_name')
         ),
         array(
             'post_type' => 'services', 
             'title' => themesflat_get_opt('services_name')
-        ),
-        array(
-            'post_type' => 'project', 
-            'title' => themesflat_get_opt('project_name')
         ),
     );
 

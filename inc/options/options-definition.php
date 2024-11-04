@@ -247,7 +247,7 @@ function themesflat_customize_default($key) {
 		'page_sidebar_list'	=> 'blog-sidebar',	
 
 		'therapists_slug' => '',
-		'therapists_name' => '',
+		'therapists_name' => 'Therapists',
 		'therapists_show_filter' => 0,
 		'therapists_grid_columns' => 3,
 		'therapists_number_post'=> 9,
