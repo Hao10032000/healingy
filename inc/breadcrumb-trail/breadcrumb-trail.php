@@ -688,7 +688,7 @@ class Breadcrumb_Trail {
 			$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_post_type_archive_link( $post_type_object->name ) ), post_type_archive_title( '', false ) );
 
 		elseif ( true === $this->args['show_title'] )
-			if (get_post_type() == 'services' || get_post_type() == 'project' || get_post_type() == 'portfolios') {
+			if (get_post_type() == 'services' || get_post_type() == 'therapists') {
 				
 			}else {
 				$this->items[] = post_type_archive_title( '', false );

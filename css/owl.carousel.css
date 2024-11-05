@@ -221,7 +221,8 @@
 .owl-theme .owl-dots .owl-dot {
     display: inline-block;
     zoom: 1;
-    margin-top: 10px
+    margin-top: 10px;
+    background-color: transparent !important;
 }
 
 .owl-theme .owl-dots .owl-dot span {
@@ -230,7 +231,6 @@
     height: 8px;
     background-color: #fff;
     border: 1px solid var(--theme-primary-color);
-    margin: 0px 10px;
     border-radius: 99px;
     display: block;
     -webkit-transition: opacity .2s ease;

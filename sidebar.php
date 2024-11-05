@@ -14,12 +14,6 @@
 	if( 'services' == get_post_type() ){
 		$sidebar = themesflat_get_opt( 'services_sidebar_list' );
 	}
-	if( 'portfolios' == get_post_type() ){
-		$sidebar = themesflat_get_opt( 'portfolios_sidebar_list' );
-	}
-	if( 'project' == get_post_type() ){
-		$sidebar = themesflat_get_opt( 'project_sidebar_list' );
-	}
 	if ( is_search() ) {			
 		$sidebar = themesflat_get_opt( 'blog_sidebar_list' );			
 	}

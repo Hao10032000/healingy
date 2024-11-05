@@ -9,7 +9,7 @@
 
 get_header(); ?>
 <?php 
-	$blog_layout = themesflat_get_opt('blog_archive_layout');
+    $blog_layout = isset($_GET['blog_archive_layout']) ? $_GET['blog_archive_layout'] : themesflat_get_opt('blog_archive_layout');
 	$columns =  themesflat_get_opt('blog_grid_columns') ;
 	
 	$imgs = array(

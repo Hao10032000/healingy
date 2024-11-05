@@ -55,7 +55,7 @@ function themesflat_customize_default($key) {
 		'header_button_text' => 'Get Your Consult!',
 		'header_button_url' => '',
 		'header_info_phone_icon' => '<i class="icon-healingy-ona-49"></i>',
-		'header_info_phone_number' => '',
+		'header_info_phone_number' => 'Phone Number',
 		'header_info_phone_number_title' => 'Call us',
 		'show_post_navigator' => 0,
 		'show_entry_footer_content'	=> 0,
@@ -247,7 +247,7 @@ function themesflat_customize_default($key) {
 		'page_sidebar_list'	=> 'blog-sidebar',	
 
 		'therapists_slug' => '',
-		'therapists_name' => 'Therapists',
+		'therapists_name' => '',
 		'therapists_show_filter' => 0,
 		'therapists_grid_columns' => 3,
 		'therapists_number_post'=> 9,
@@ -265,8 +265,6 @@ function themesflat_customize_default($key) {
 		'number_related_post_therapists' => 3,
 		'therapists_featured_title' => 'Therapists Details',
 
-
-		'project_number_post'=> 9,
 
 		'services_slug' => '',
 		'services_name' => '',

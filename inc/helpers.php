@@ -324,11 +324,8 @@ function themesflat_blog_layout() {
         case 'post':
             $layout = themesflat_get_opt('sidebar_layout');
             break;
-        case 'portfolios':
-            $layout = themesflat_get_opt('portfolios_layout');
-            break;
-        case 'project':
-            $layout = themesflat_get_opt('project_layout');
+        case 'therapists':
+            $layout = themesflat_get_opt('therapists_layout');
             break;
         case 'services':
             $layout = themesflat_get_opt('services_layout');
@@ -913,14 +910,11 @@ add_filter( 'wp_kses_allowed_html', 'themesflat_kses_allowed_html', 10, 2);
 
 
 function themesflat_change_post_types_slug( $args, $post_type ) { 
-   if ( 'portfolios' === $post_type ) {
-      $args['rewrite']['slug'] = themesflat_get_opt('portfolio_slug');
-   }
    if ( 'services' === $post_type ) {
       $args['rewrite']['slug'] = themesflat_get_opt('services_slug');
    }
-   if ( 'project' === $post_type ) {
-      $args['rewrite']['slug'] = themesflat_get_opt('project_slug');
+   if ( 'therapists' === $post_type ) {
+      $args['rewrite']['slug'] = themesflat_get_opt('therapists_slug');
    }
    return $args;
 }
@@ -936,12 +930,12 @@ function themesflat_change_archive_titles($orig_title) {
         
     $types = array(
         array(
-            'post_type' => 'therapists', 
-            'title' => themesflat_get_opt('therapists_name')
-        ),
-        array(
             'post_type' => 'services', 
             'title' => themesflat_get_opt('services_name')
+        ),
+        array(
+            'post_type' => 'therapists', 
+            'title' => themesflat_get_opt('therapists_name')
         ),
     );
 
@@ -1082,10 +1076,10 @@ function themesflat_get_page_titles() {
             if (themesflat_get_opt('services_name') != '') {
                 $title = themesflat_get_opt('services_name');
             }                      
-        } elseif ( is_post_type_archive('portfolios') ) {
+        } elseif ( is_post_type_archive('therapists') ) {
             $title = post_type_archive_title('', false);
-            if (themesflat_get_opt('portfolio_name') != '') {
-                $title = themesflat_get_opt('portfolio_name');
+            if (themesflat_get_opt('therapists_name') != '') {
+                $title = themesflat_get_opt('therapists_name');
             }                      
         } elseif ( is_post_type_archive('emsb_service') ) {
             $title = esc_html__('Book Appointment','healingy');           

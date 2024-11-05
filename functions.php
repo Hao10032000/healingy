@@ -439,7 +439,7 @@ function tf_enqueue_script_style() {
 function load_posts_by_ajax_callback() {
     check_ajax_referer('load_more_posts', 'security');
 
-	$blog_layout = themesflat_get_opt('blog_archive_layout');
+    $blog_layout = isset($_GET['blog_archive_layout']) ? $_GET['blog_archive_layout'] : themesflat_get_opt('blog_archive_layout');
 	$columns =  themesflat_get_opt('blog_grid_columns') ;
 	
 	$imgs = array(

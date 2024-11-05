@@ -20,7 +20,7 @@ get_header(); ?>
 									</div>
 									
 									<div class="wrap-button-404">
-										<a href="<?php echo esc_url( home_url('/') ); ?>" class="button-primary button-md themesflat-button"><?php esc_html_e( 'Back To Home Page','healingy' ) ?></a>
+										<a href="<?php echo esc_url( home_url('/') ); ?>" class="button-primary button-md themesflat-button tf-btn "><span><?php esc_html_e( 'Back To Home Page','healingy' ) ?></span></a>
 									</div>
 								</div>
 							</div>

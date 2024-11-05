@@ -22,49 +22,49 @@ $wp_customize->add_control(
     )
 );
 
-// $wp_customize->add_setting(
-//     'blog_archive_layout',
-//     array(
-//         'default'           => themesflat_customize_default('blog_archive_layout'),
-//         'sanitize_callback' => 'esc_attr',
-//     )
-// );
-// $wp_customize->add_control( 
-//     'blog_archive_layout',
-//     array (
-//         'type'      => 'select',           
-//         'section'   => 'section_content_blog_archive',
-//         'priority'  => 2,
-//         'label'         => esc_html__('Blog Layout', 'healingy'),
-//         'choices'   => array (
-//             'blog-list' =>  esc_html__( 'Blog List','healingy' ),                  
-//             'blog-grid'=> esc_html__( 'Blog Grid','healingy' ),
-//             )  
-//     )
-// );
+$wp_customize->add_setting(
+    'blog_archive_layout',
+    array(
+        'default'           => themesflat_customize_default('blog_archive_layout'),
+        'sanitize_callback' => 'esc_attr',
+    )
+);
+$wp_customize->add_control( 
+    'blog_archive_layout',
+    array (
+        'type'      => 'select',           
+        'section'   => 'section_content_blog_archive',
+        'priority'  => 2,
+        'label'         => esc_html__('Blog Layout', 'healingy'),
+        'choices'   => array (
+            'blog-list' =>  esc_html__( 'Blog List','healingy' ),                  
+            'blog-grid'=> esc_html__( 'Blog Grid','healingy' ),
+            )  
+    )
+);
 
-// // Gird columns Posts
-// $wp_customize->add_setting(
-//     'blog_grid_columns',
-//     array(
-//         'default'           => themesflat_customize_default('blog_grid_columns'),
-//         'sanitize_callback' => 'themesflat_sanitize_grid_post_related',
-//     )
-// );
-// $wp_customize->add_control(
-//     'blog_grid_columns',
-//     array(
-//         'type'      => 'select',           
-//         'section'   => 'section_content_blog_archive',
-//         'priority'  => 3,
-//         'label'     => esc_html__('Post Grid Columns', 'healingy'),
-//         'choices'   => array(
-//             2     => esc_html__( '2 Columns', 'healingy' ),
-//             3     => esc_html__( '3 Columns', 'healingy' ),
-//             4     => esc_html__( '4 Columns', 'healingy' ),                
-//         )
-//     )
-// );
+// Gird columns Posts
+$wp_customize->add_setting(
+    'blog_grid_columns',
+    array(
+        'default'           => themesflat_customize_default('blog_grid_columns'),
+        'sanitize_callback' => 'themesflat_sanitize_grid_post_related',
+    )
+);
+$wp_customize->add_control(
+    'blog_grid_columns',
+    array(
+        'type'      => 'select',           
+        'section'   => 'section_content_blog_archive',
+        'priority'  => 3,
+        'label'     => esc_html__('Post Grid Columns', 'healingy'),
+        'choices'   => array(
+            2     => esc_html__( '2 Columns', 'healingy' ),
+            3     => esc_html__( '3 Columns', 'healingy' ),
+            4     => esc_html__( '4 Columns', 'healingy' ),                
+        )
+    )
+);
 
 $wp_customize->add_setting (
     'blog_sidebar_list',
