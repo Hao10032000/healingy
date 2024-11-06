@@ -440,6 +440,7 @@ function load_posts_by_ajax_callback() {
     check_ajax_referer('load_more_posts', 'security');
 
     $blog_layout = isset($_GET['blog_archive_layout']) ? $_GET['blog_archive_layout'] : themesflat_get_opt('blog_archive_layout');
+	$blog_layout_sidebar = isset($_GET['sidebar_layout']) ? $_GET['sidebar_layout'] : themesflat_get_opt('sidebar_layout');
 	$columns =  themesflat_get_opt('blog_grid_columns') ;
 	
 	$imgs = array(
@@ -496,7 +497,7 @@ function load_posts_by_ajax_callback() {
                         </div>
                     </div><!-- #primary -->
                     <?php 
-                    if ( themesflat_get_opt( 'sidebar_layout' ) == 'sidebar-left' || themesflat_get_opt( 'sidebar_layout' ) == 'sidebar-right' ) :
+                    if ( $blog_layout_sidebar == 'sidebar-left' || $blog_layout_sidebar == 'sidebar-right' ) :
                         get_sidebar();
                     endif;
                     ?>

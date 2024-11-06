@@ -6,6 +6,7 @@
  *
  * @package healingy
  */
+$blog_layout_sidebar = isset($_GET['sidebar_layout']) ? $_GET['sidebar_layout'] : themesflat_blog_layout();
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -30,4 +31,4 @@
 	<!-- Page Title -->
 	<?php get_template_part( 'tpl/page-title'); ?>	
 	<div id="main-content" class="site-main clearfix">
-		<div id="themesflat-content" class="page-wrap <?php echo esc_attr( themesflat_blog_layout() ); ?>">
+		<div id="themesflat-content" class="page-wrap <?php echo esc_attr( $blog_layout_sidebar ); ?>">
