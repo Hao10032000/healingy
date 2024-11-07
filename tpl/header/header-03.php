@@ -67,9 +67,6 @@ if (themesflat_get_opt_elementor('social_topbar') != '') {
                             <?php if ( $header_search_box == 1 ) :?>
                             <div class="show-search">
                                 <a href="#"><i class="icon-healingy-search"></i></a>
-                                <div class="submenu top-search widget_search">
-                                    <?php get_search_form(); ?>
-                                </div>
                             </div>
                             <?php endif;?>
                             <?php if ( $header_sidebar_toggler == 1 ) :?>
@@ -116,3 +113,16 @@ if (themesflat_get_opt_elementor('social_topbar') != '') {
         </div>
     </div><!-- /.canvas-nav-wrap -->
 </header><!-- /.header -->
+<div class="submenu top-search widget_search">
+    <div class="search-overlay"></div>
+    <div class="search-content">
+        <div class="top-inner-search">
+            <?php get_template_part( 'tpl/header/brand-mobile'); ?>
+            <div class="button-close-search">
+                <i class="icon-healingy-Plus"></i>
+            </div>
+        </div>
+        <?php get_search_form(); ?>
+    </div>
+
+</div>

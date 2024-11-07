@@ -55,9 +55,6 @@ if (themesflat_get_opt_elementor('social_topbar') != '') {
                             <?php if ( $header_search_box == 1 ) :?>
                             <div class="show-search">
                                 <a href="#"><i class="icon-healingy-search"></i></a>
-                                <div class="submenu top-search widget_search">
-                                    <?php get_search_form(); ?>
-                                </div>
                             </div>
                             <?php endif;?>
                             <?php if ( $header_sidebar_toggler == 1 ) :?>
@@ -68,8 +65,9 @@ if (themesflat_get_opt_elementor('social_topbar') != '') {
                             </div><!-- /.header-modal-menu-left-btn -->
                             <?php endif;?>
                             <?php if ( $header_button == 1 ) :?>
-                            <a href="<?php echo get_permalink ( get_theme_mod ( 'header_button_url' )); ?>" class="tf-btn <?php if(!is_user_logged_in()) echo 'display-pop-login'; ?>"><span><?php echo wp_kses($header_button_text, themesflat_kses_allowed_html()); ?></span></a>
-                            <?php endif;?> 
+                            <a href="<?php echo get_permalink ( get_theme_mod ( 'header_button_url' )); ?>"
+                                class="tf-btn <?php if(!is_user_logged_in()) echo 'display-pop-login'; ?>"><span><?php echo wp_kses($header_button_text, themesflat_kses_allowed_html()); ?></span></a>
+                            <?php endif;?>
 
                         </div>
                         <?php endif; ?>
@@ -107,3 +105,16 @@ if (themesflat_get_opt_elementor('social_topbar') != '') {
         </div>
     </div><!-- /.canvas-nav-wrap -->
 </header><!-- /.header -->
+<div class="submenu top-search widget_search">
+    <div class="search-overlay"></div>
+    <div class="search-content">
+        <div class="top-inner-search">
+            <?php get_template_part( 'tpl/header/brand-mobile'); ?>
+            <div class="button-close-search">
+                <i class="icon-healingy-Plus"></i>
+            </div>
+        </div>
+        <?php get_search_form(); ?>
+    </div>
+
+</div>
