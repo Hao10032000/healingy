@@ -1394,9 +1394,6 @@ header .flat-information li a {
     padding-right: 80px;
 }
 
-.header-03 .header-wrap {
-    padding: 0px 20px;
-}
 
 #header.header-01 .header-wrap .header-ct-center {
     justify-content: left;
@@ -1493,6 +1490,9 @@ header .flat-information li a {
     border-radius: 0%;
     opacity: 1;
 }
+.tf-button2 i {
+    margin-left: 9px;
+}
 .wrap-tf-button2 {
     display: inline-flex;
 }
@@ -1500,7 +1500,13 @@ header .flat-information li a {
 .tf-btn:hover span {
     color: var(--theme-secondary-color);
 }
-
+.sticky-siderbar{
+    position: sticky !important;
+    top: 140px;
+}
+#header.header-sticky #mainnav > ul > li > a {
+    line-height: 93px !important;
+}
 /* buttton */
 
 
@@ -1916,6 +1922,12 @@ article .post-meta .item-meta a:hover {
 .tf-button-home2::after,
 .tf-button-home2::before {
     background-color: var(--theme-accent-color)
+}
+#mainnav ul.sub-menu>li>a:hover {
+    background-color: #F5F1ED
+}
+#mainnav ul.sub-menu > .current-menu-item{
+    background-color: #F5F1ED
 }
 
 #mainnav ul.sub-menu>li>a>span {
@@ -2698,7 +2710,8 @@ header .block a {
     top: 50%;
     -webkit-transform-origin: 50% 50%;
     -ms-transform-origin: 50% 50%;
-    transform-origin: 50% 50%
+    transform-origin: 50% 50%;
+    background-color: var(--theme-primary-color) !important;
 }
 
 .btn-menu span {
@@ -2708,11 +2721,12 @@ header .block a {
     left: 0;
     top: 50%;
     overflow: hidden;
-    text-indent: 200%
+    text-indent: 200%;
+    background-color: var(--theme-primary-color) !important;
 }
 
 .btn-menu span.line-1 {
-    top: 50%
+    top: 50%;
 }
 
 .btn-menu span.line-2 {
@@ -6573,7 +6587,9 @@ footer .widget.widget_product_categories ul>li>a:hover:before {
     line-height: 22px;
     color: #ABB0B4;
 }
-
+.wpcf7-spinner {
+    display: none;
+}
 .bottom ul.menu>li:first-child>a {
     padding-left: 0;
     margin-left: 0
@@ -6591,7 +6607,7 @@ footer .widget.widget_product_categories ul>li>a:hover:before {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: var(--theme-primary-color);
+    background-color: var(--theme-secondary-color);
     color: #fff;
     cursor: pointer;
     line-height: 50px;
@@ -10125,6 +10141,7 @@ button:hover {
 .btn-submit {
     background-color: var(--theme-secondary-color) !important;
     color: var(--theme-primary-color) !important;
+    border: 1px solid var(--theme-secondary-color) !important;
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
@@ -10134,6 +10151,7 @@ button:hover {
 .btn-submit:hover{
     background-color: var(--theme-primary-color) !important;
     color: var(--theme-secondary-color) !important;
+    border: 1px solid var(--theme-primary-color) !important;
 }
 .wpcf7-form-control-wrap{
     margin-bottom: 19px;
