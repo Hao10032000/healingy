@@ -307,7 +307,6 @@ add_action( 'wp_enqueue_scripts', 'themesflat_scripts_styles' );
 function themesflat_scripts() {    
     // Theme stylesheet.    
     wp_enqueue_style( 'icon-healingy', THEMESFLAT_LINK . 'css/icon-healingy.css' );
-    wp_enqueue_style( 'star', THEMESFLAT_LINK . 'css/star.css' );
     wp_enqueue_style( 'owl-carousel', THEMESFLAT_LINK . 'css/owl.carousel.css' );
     wp_enqueue_style( 'themesflat-animated', THEMESFLAT_LINK . 'css/animated.css' );
     wp_enqueue_style( 'themesflat-main', THEMESFLAT_LINK . 'css/main.css' );
