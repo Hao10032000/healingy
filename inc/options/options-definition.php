@@ -285,6 +285,7 @@ function themesflat_customize_default($key) {
 		'services_related_grid_columns' => 3,
 		'number_related_post_services' => 3,
 		'services_featured_title' => '',
+		'services_title_single' => 1,
 		
 		'typography_footer' => array(
 			'family' => 'Archivo',

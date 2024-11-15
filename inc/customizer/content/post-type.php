@@ -619,6 +619,24 @@ if (function_exists('themesflat_register_services_post_type')) {
         )
     );
 
+     // Show Post Navigator services
+     $wp_customize->add_setting (
+         'services_title_single',
+         array (
+             'sanitize_callback' => 'themesflat_sanitize_checkbox',
+             'default' => themesflat_customize_default('services_title_single'),     
+         )
+     );
+     $wp_customize->add_control( new themesflat_Checkbox( $wp_customize,
+         'services_title_single',
+         array(
+             'type'      => 'checkbox',
+             'label'     => esc_html__('Single Title ( OFF | ON )', 'healingy'),
+             'section'   => 'section_content_post_type',
+             'priority'  => 41
+         ))
+     ); 
+
     // Show Post Navigator services
     $wp_customize->add_setting (
         'services_show_post_navigator',
