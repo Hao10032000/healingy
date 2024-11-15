@@ -62,6 +62,7 @@ function themesflat_customize_default($key) {
 		'logo_width' => 192,
 		'menu_location_primary' => 'primary',
 		'site_logo'	=> THEMESFLAT_LINK . 'images/logo.png',
+		'site_logo_sticky'	=> THEMESFLAT_LINK . 'images/logo.png',
 		'site_logo_fixed'	=> THEMESFLAT_LINK . 'images/logo.png',
 		'site_logo_mobile'	=> THEMESFLAT_LINK . 'images/logo.png',	
 		'show_bottom' => 1,		

@@ -1413,6 +1413,19 @@ header .flat-information li a {
     justify-content: center;
     align-items: center
 }
+
+#header .logo .site-logo-fixed {
+    display: none;
+  }
+  
+  .header.header-sticky .header-wrap .site-logo {
+    display: none;
+  }
+  
+  #header.header-sticky .header-wrap .logo .site-logo-fixed {
+    display: block;
+  }
+
 .inner-canvas-nav .logo{
     justify-content: flex-start !important;
     align-items: center;
