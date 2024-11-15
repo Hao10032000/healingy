@@ -1507,6 +1507,12 @@ header .flat-information li a {
 #header.header-sticky #mainnav > ul > li > a {
     line-height: 93px !important;
 }
+.header-02 #header.header-sticky #mainnav > ul > li > a {
+    line-height: 74px !important;
+}
+.header-02 #header.header-sticky .logo {
+    min-height: 70px;
+}
 /* buttton */
 
 
@@ -1839,7 +1845,7 @@ article .post-meta .item-meta a:hover {
 
 #mainnav>ul>li.menu-item-has-children>a::after {
     font-family: healingy;
-    content: "\e924";
+    content: "\e926";
     font-weight: 100;
     font-size: 12px;
     display: inline-block;
@@ -10129,7 +10135,7 @@ button:hover {
     position: absolute;
     right: 20px;
     top: 12px;
-    content: "\e924";
+    content: "\e926";
     font-family: 'healingy';
     z-index: 2;
     font-size: 14px;
@@ -10183,4 +10189,11 @@ button:hover {
     color: var(--theme-primary-color);
     margin-right: 10px;
     font-size: 22px;
+}
+.themesflat-shortcode-socials {
+    display: flex;
+    flex-wrap: wrap;
+}
+#main-content {
+    min-height: calc(100vh - 100px);
 }

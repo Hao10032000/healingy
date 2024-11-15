@@ -253,6 +253,13 @@ class themesflat_options_elementor {
                 'type'    => Controls_Manager::MEDIA,
             ]
         );
+        $element->add_control(
+            'site_logo_fixed',
+            [
+                'label'   => esc_html__( 'Custom Logo Fixed', 'healingy' ),
+                'type'    => Controls_Manager::MEDIA,
+            ]
+        );
         $element->add_responsive_control(
             'logo_width',
             [
