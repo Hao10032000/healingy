@@ -367,6 +367,17 @@ class themesflat_options_elementor {
             ]
         );
         $element->add_control(
+            'header_color_sticky',
+            [
+                'label' => esc_html__( 'Header Color Sticky', 'healingy' ),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} #header.header-sticky #mainnav>ul>li>a' => 'color: {{VALUE}};',
+                ],
+                'condition' => [ 'style_header!' => '' ],
+            ]
+        );
+        $element->add_control(
             'header_height',
             [
                 'label' => esc_html__( 'Header Height', 'healingy' ),

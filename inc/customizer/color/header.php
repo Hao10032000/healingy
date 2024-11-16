@@ -56,6 +56,24 @@ $wp_customize->add_control( new themesflat_ColorOverlay(
             'priority'      => 2
         )
     )
+);
+// Header color sticky
+$wp_customize->add_setting(
+    'header_color_sticky',
+    array(
+        'default'           => themesflat_customize_default('header_color_sticky'),
+        'sanitize_callback' => 'esc_attr',
+    )
+);
+$wp_customize->add_control( new themesflat_ColorOverlay(
+        $wp_customize,
+        'header_color_sticky',
+        array(
+            'label'         => esc_html__('Sticky Header Color Menu', 'healingy'),
+            'section'       => 'color_header',
+            'priority'      => 3
+        )
+    )
 ); 
 
 // Menu a color
