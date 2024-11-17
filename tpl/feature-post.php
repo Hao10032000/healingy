@@ -7,29 +7,30 @@ $archive_day   = get_the_time('d');
 
 switch ( get_post_format() ) {	
 	case 'gallery':
-		$size = 'themesflat-blog';
-		$images = themesflat_decode(themesflat_meta( 'gallery_images'));
+				$size = 'themesflat-blog';
+		$images = themesflat_decode( themesflat_meta( 'gallery_images' ) );
 
-		if ( empty( $images ) )
+		if ( empty( $images ) ) {
 			break;
+		}
 		?>
-<div class="featured-post">
-    <div class="customizable-carousel" data-loop="true" data-items="1" data-md-items="1" data-sm-items="1"
-        data-xs-items="1" data-space="15" data-autoplay="true" data-autospeed="4000" data-nav-dots="false"
-        data-nav-arrows="true">
-        <?php 
-					if ( !empty( $images ) && is_array( $images ) ) {
-						foreach ( $images as $image ) { ?>
-        <div class="item-gallery">
-            <?php echo wp_get_attachment_image($image,$themesflat_thumbnail); ?>
-            <div class="overlay"></div>
-        </div>
-        <?php }
-					} 
-					?>
-    </div>
-</div><!-- /.feature-post -->
-<?php 
+        <div class="featured-post">
+            <div class="customizable-carousel owl-carousel" data-loop="true" data-items="1" data-md-items="1" data-sm-items="1"
+                 data-xs-items="1" data-space="15" data-autoplay="true" data-autospeed="4000" data-nav-dots="false"
+                 data-nav-arrows="true">
+				<?php
+				if ( ! empty( $images ) && is_array( $images ) ) {
+					foreach ( $images as $image ) { ?>
+                        <div class="item-gallery">
+							<?php echo wp_get_attachment_image( $image, $themesflat_thumbnail ); ?>
+                        </div>
+					<?php }
+				}
+				?>
+            </div>
+        </div><!-- /.feature-post -->
+		<?php
+		break;
 	break;
 	case 'video':	
 		$video = themesflat_meta('video_url');
@@ -47,13 +48,13 @@ switch ( get_post_format() ) {
 			<div class="video-video-box-overlay">
 				<div class="video-video-box-button-sm video-box-button-lg">					
 					<button class="video-video-play-icon" data-izimodal-open="#format-video">
-						<i class="fas fa-play"></i>
+						<i class="icon-monal-play"></i>
 					</button>
 				</div>					
 			</div>';
 			$end = '</div>
 			<div class="izimodal" id="format-video" data-izimodal-width="850px" data-iziModal-fullscreen="true">
-			    <iframe height="430" src="'.esc_url($video).'" class="full-width shadow-primary" style="width: 100%; max-width: 100%;"></iframe>
+			    <iframe height="430" src="'.esc_url($video).'" class="full-width shadow-primary" ></iframe>
 			</div>';
 		}
 		$feature_post .= $end;
@@ -62,6 +63,11 @@ switch ( get_post_format() ) {
 	case 'audio':
 		$audio_url = themesflat_meta('audio_url');
 		echo '<div class="themesflat_audio">'.$audio_url.'</div>';
+	break;
+
+	case 'quote':
+		$quote_text = themesflat_meta('quote_text');
+		echo '<div class="featured-post"> <p class="quote-image">'.esc_html($quote_text).'</p> ' . get_the_post_thumbnail(null,$themesflat_thumbnail) . '<div class="overlay"></div></div>';
 	break;
 
 	default:
@@ -75,26 +81,6 @@ switch ( get_post_format() ) {
 		$feature_post .= get_the_post_thumbnail( get_the_ID(), $size );
 }
 
-if ( $feature_post ): ?>
-<div class="featured-post">
-    <?php 
-echo '<div class="post-meta">';
-    $meta_elements = themesflat_layout_draganddrop(themesflat_get_opt( 'meta_elements' ));
-    foreach ( $meta_elements as $meta_element ) :
-        if ( 'date' == $meta_element ) {
-            echo '<span class="item-meta post-date">';   
-                $archive_year  = get_the_time('Y'); 
-                $archive_month = get_the_time('m'); 
-                $archive_day   = get_the_time('d');                 
-                echo '<a class="meta-text" href="'.get_day_link( $archive_year, $archive_month, $archive_day).'">'.get_the_date('d M ').'</a>';
-            echo '</span>';
-        }
-    endforeach;
-echo '</div>';
-?>
-    <?php echo wp_kses($feature_post, themesflat_kses_allowed_html()); ?>
-</div>
-
-<?php
-endif;
+if ( $feature_post )
+	echo '<div class="featured-post">' . $feature_post . '<div class="overlay"></div></div>';
 ?>
