@@ -84,7 +84,7 @@ function themesflat_setup() {
      * See http://codex.wordpress.org/Post_Formats
      */
     add_theme_support( 'post-formats', array(
-        'aside', 'image', 'gallery', 'video', 'quote', 'link', 'audio'
+         'image', 'gallery', 'video', 'quote', 'audio'
     ) );
 
     // Set up the WordPress core custom background feature.
