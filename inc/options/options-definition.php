@@ -7,7 +7,7 @@
 
 function themesflat_customize_default($key) {
 	$default = array(
-		'social_links'	=> array ("facebook" => '#', "twitter" => '#', "instagram" => '#', "linkedin2"  => '#'),
+		'social_links'	=> array ("facebook" => '#', "twitter" => '#', "instagram" => '#', "linkedin"  => '#'),
 		'show_social_share' => 0,		
 		'social_footer' => 0,
 		'go_top' => 1,
@@ -188,7 +188,7 @@ function themesflat_customize_default($key) {
 		),
 		'page_title_background_color' => '#F5F1ED',
 		'page_title_background_color_opacity' => '100',
-		'page_title_text_color' => '#3C210E',		
+		'page_title_text_color' => '',		
 		'page_title_controls' => array('padding-top' => 59, 'padding-bottom' => 63),
 		'page_title_background_image' => '',
 		'page_title_image_size' => 'cover',
@@ -233,7 +233,7 @@ function themesflat_customize_default($key) {
 		'blog_archive_exclude' => '',
 		'blog_featured_title' => 'Blog Details',
 		'style_blog_single' => 'content-single',
-		'sidebar_layout' => 'fullwidth',
+		'sidebar_layout' => 'sidebar-right',
 		'blog_archive_layout' => 'blog-list',
 		'related_post_style'	=> 'blog-grid',
 		'grid_columns_post_related' => 2,

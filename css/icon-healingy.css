@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'healingy';
-  src:  url('../fonts/healingy.eot?fnyivl');
-  src:  url('../fonts/healingy.eot?fnyivl#iefix') format('embedded-opentype'),
-    url('../fonts/healingy.ttf?fnyivl') format('truetype'),
-    url('../fonts/healingy.woff?fnyivl') format('woff'),
-    url('../fonts/healingy.svg?fnyivl#healingy') format('svg');
+  src:  url('../fonts/healingy.eot?4flrxx');
+  src:  url('../fonts/healingy.eot?4flrxx#iefix') format('embedded-opentype'),
+    url('../fonts/healingy.ttf?4flrxx') format('truetype'),
+    url('../fonts/healingy.woff?4flrxx') format('woff'),
+    url('../fonts/healingy.svg?4flrxx#healingy') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,102 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-healingy-thumb-tack:before {
+  content: "\e97c";
+}
+.icon-healingy-toggle-on:before {
+  content: "\e97a";
+}
+.icon-healingy-toggle-off:before {
+  content: "\e97b";
+}
+.icon-healingy-slack:before {
+  content: "\e928";
+}
+.icon-healingy-digg:before {
+  content: "\e96f";
+}
+.icon-healingy-bitcoin:before {
+  content: "\e970";
+}
+.icon-healingy-btc:before {
+  content: "\e970";
+}
+.icon-healingy-dribbble:before {
+  content: "\e971";
+}
+.icon-healingy-brand:before {
+  content: "\e971";
+}
+.icon-healingy-social:before {
+  content: "\e971";
+}
+.icon-healingy-steam:before {
+  content: "\e972";
+}
+.icon-healingy-brand1:before {
+  content: "\e972";
+}
+.icon-healingy-social1:before {
+  content: "\e972";
+}
+.icon-healingy-stackoverflow:before {
+  content: "\e973";
+}
+.icon-healingy-brand2:before {
+  content: "\e973";
+}
+.icon-healingy-social2:before {
+  content: "\e973";
+}
+.icon-healingy-spotify:before {
+  content: "\e974";
+}
+.icon-healingy-brand3:before {
+  content: "\e974";
+}
+.icon-healingy-social3:before {
+  content: "\e974";
+}
+.icon-healingy-behance:before {
+  content: "\e975";
+}
+.icon-healingy-brand4:before {
+  content: "\e975";
+}
+.icon-healingy-social4:before {
+  content: "\e975";
+}
+.icon-healingy-vimeo:before {
+  content: "\e976";
+}
+.icon-healingy-brand5:before {
+  content: "\e976";
+}
+.icon-healingy-social5:before {
+  content: "\e976";
+}
+.icon-healingy-youtube:before {
+  content: "\e977";
+}
+.icon-healingy-brand6:before {
+  content: "\e977";
+}
+.icon-healingy-social6:before {
+  content: "\e977";
+}
+.icon-healingy-pinterest:before {
+  content: "\e978";
+}
+.icon-healingy-brand7:before {
+  content: "\e978";
+}
+.icon-healingy-social7:before {
+  content: "\e978";
+}
+.icon-healingy-google-plus:before {
+  content: "\e979";
+}
 .icon-healingy-HandHeart:before {
   content: "\e90a";
 }
@@ -79,7 +175,7 @@
 .icon-healingy-date2:before {
   content: "\e908";
 }
-.icon-healingy-facebooklogo:before {
+.icon-healingy-facebook:before {
   content: "\e909";
 }
 .icon-healingy-instagram:before {
@@ -88,7 +184,7 @@
 .icon-healingy-Lifebuoy:before {
   content: "\e90f";
 }
-.icon-healingy-linkedinlogo:before {
+.icon-healingy-linkedin2:before {
   content: "\e910";
 }
 .icon-healingy-mail:before {
