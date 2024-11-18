@@ -1,104 +1,63 @@
 <?php 
-if (function_exists('themesflat_register_portfolio_post_type')) {
+if (function_exists('themesflat_register_therapists_post_type')) {
 
-    /* Portfolio Archive 
+    /* therapists Archive 
     =================================================*/  
-    $wp_customize->add_control( new themesflat_Info( $wp_customize, 'portfolio', array(
-        'label' => esc_html__('PORTFOLIO ARCHIVE', 'healingy'),
+    $wp_customize->add_control( new themesflat_Info( $wp_customize, 'therapists', array(
+        'label' => esc_html__('therapists ARCHIVE', 'healingy'),
         'section' => 'section_content_post_type',
         'settings' => 'themesflat_options[info]',
         'priority' => 1
         ) )
     ); 
 
-    // Portfolio Slug
+    // therapists Slug
     $wp_customize->add_setting (
-        'portfolio_slug',
+        'therapists_slug',
         array(
-            'default' =>  themesflat_customize_default('portfolio_slug'),
+            'default' =>  themesflat_customize_default('therapists_slug'),
             'sanitize_callback' => 'themesflat_sanitize_text'
         )
     );
     $wp_customize->add_control(
-        'portfolio_slug',
+        'therapists_slug',
         array(
             'type'      => 'text',
-            'label'     => esc_html('Portfolio Slug', 'healingy'),
+            'label'     => esc_html('therapists Slug', 'healingy'),
             'section'   => 'section_content_post_type',
             'priority'  => 2
         )
     );  
 
-    // Portfolio Name
+    // therapists Name
     $wp_customize->add_setting (
-        'portfolio_name',
+        'therapists_name',
         array(
-            'default' =>  themesflat_customize_default('portfolio_name'),
+            'default' =>  themesflat_customize_default('therapists_name'),
             'sanitize_callback' => 'themesflat_sanitize_text'
         )
     );
     $wp_customize->add_control(
-        'portfolio_name',
+        'therapists_name',
         array(
             'type'      => 'text',
-            'label'     => esc_html('Portfolio Name', 'healingy'),
+            'label'     => esc_html('therapists Name', 'healingy'),
             'section'   => 'section_content_post_type',
             'priority'  => 3
         )
     );
 
-    $wp_customize->add_setting(
-        'portfolios_layout',
-        array(
-            'default'           => themesflat_customize_default('portfolios_layout'),
-            'sanitize_callback' => 'esc_attr',
-        )
-    );
-    $wp_customize->add_control( 
-        'portfolios_layout',
-        array (
-            'type'      => 'select',           
-            'section'   => 'section_content_post_type',
-            'priority'  => 4,
-            'label'         => esc_html__('Sidebar Position', 'healingy'),
-            'choices'   => array (
-                'sidebar-right'     => esc_html__( 'Sidebar Right','healingy' ),
-                'sidebar-left'      =>  esc_html__( 'Sidebar Left','healingy' ),
-                'fullwidth'         =>   esc_html__( 'Full Width','healingy' ),
-                'fullwidth-small'   =>   esc_html__( 'Full Width Small','healingy' ),
-                'fullwidth-center'  =>   esc_html__( 'Full Width Center','healingy' ),
-            ),
-        )
-    );
 
+    // Number Posts therapists
     $wp_customize->add_setting (
-        'portfolios_sidebar_list',
+        'therapists_number_post',
         array(
-            'default'           => themesflat_customize_default('portfolios_sidebar_list'),
-            'sanitize_callback' => 'esc_html',
-        )
-    );
-    $wp_customize->add_control( new themesflat_DropdownSidebars($wp_customize,
-        'portfolios_sidebar_list',
-        array(
-            'type'      => 'dropdown',           
-            'section'   => 'section_content_post_type',
-            'priority'  => 4,
-            'label'         => esc_html__('List Sidebar', 'healingy'),
-            
-        ))
-    );
-
-    // Number Posts Portfolios
-    $wp_customize->add_setting (
-        'portfolios_number_post',
-        array(
-            'default' => themesflat_customize_default('portfolios_number_post'),
+            'default' => themesflat_customize_default('therapists_number_post'),
             'sanitize_callback' => 'themesflat_sanitize_text'
         )
     );
     $wp_customize->add_control(
-        'portfolios_number_post',
+        'therapists_number_post',
         array(
             'type'      => 'text',
             'label'     => esc_html__('Show Number Posts', 'healingy'),
@@ -107,39 +66,16 @@ if (function_exists('themesflat_register_portfolio_post_type')) {
         )
     );
 
-    // Gird columns portfolio
+    // Order By therapists
     $wp_customize->add_setting(
-        'portfolio_grid_columns',
+        'therapists_order_by',
         array(
-            'default'           => themesflat_customize_default('portfolio_grid_columns'),
+            'default' => themesflat_customize_default('therapists_order_by'),
             'sanitize_callback' => 'esc_attr',
         )
     );
     $wp_customize->add_control(
-        'portfolio_grid_columns',
-        array(
-            'type'      => 'select',           
-            'section'   => 'section_content_post_type',
-            'priority'  => 4,
-            'label'     => esc_html('Grid Columns', 'healingy'),
-            'choices'   => array(
-                2     => esc_html( '2 Columns', 'healingy' ),
-                3     => esc_html( '3 Columns', 'healingy' ),
-                4     => esc_html( '4 Columns', 'healingy' )
-            )
-        )
-    );
-
-    // Order By portfolio
-    $wp_customize->add_setting(
-        'portfolio_order_by',
-        array(
-            'default' => themesflat_customize_default('portfolio_order_by'),
-            'sanitize_callback' => 'esc_attr',
-        )
-    );
-    $wp_customize->add_control(
-        'portfolio_order_by',
+        'therapists_order_by',
         array(
             'type'      => 'select',
             'label'     => esc_html('Order By', 'healingy'),
@@ -157,16 +93,16 @@ if (function_exists('themesflat_register_portfolio_post_type')) {
         )
     );
 
-    // Order Direction portfolio
+    // Order Direction therapists
     $wp_customize->add_setting(
-        'portfolio_order_direction',
+        'therapists_order_direction',
         array(
-            'default' => themesflat_customize_default('portfolio_order_direction'),
+            'default' => themesflat_customize_default('therapists_order_direction'),
             'sanitize_callback' => 'esc_attr',
         )
     );
     $wp_customize->add_control(
-        'portfolio_order_direction',
+        'therapists_order_direction',
         array(
             'type'      => 'select',
             'label'     => esc_html('Order Direction', 'healingy'),
@@ -179,16 +115,16 @@ if (function_exists('themesflat_register_portfolio_post_type')) {
         )
     );
 
-    // Portfolio Exclude Post
+    // therapists Exclude Post
     $wp_customize->add_setting (
-        'portfolio_exclude',
+        'therapists_exclude',
         array(
-            'default' =>  themesflat_customize_default('portfolio_exclude'),
+            'default' =>  themesflat_customize_default('therapists_exclude'),
             'sanitize_callback' => 'themesflat_sanitize_text'
         )
     );
     $wp_customize->add_control(
-        'portfolio_exclude',
+        'therapists_exclude',
         array(
             'type'      => 'text',
             'label'     => esc_html('Post Ids Will Be Inorged. Ex: 1,2,3', 'healingy'),
@@ -197,164 +133,34 @@ if (function_exists('themesflat_register_portfolio_post_type')) {
         )
     );
 
-    // Show filter portfolio
-    $wp_customize->add_setting (
-        'portfolio_show_filter',
-        array (
-            'sanitize_callback' => 'themesflat_sanitize_checkbox',
-            'default' => themesflat_customize_default('portfolio_show_filter'),     
-        )
-    );
-    $wp_customize->add_control( new themesflat_Checkbox( $wp_customize,
-        'portfolio_show_filter',
-        array(
-            'type'      => 'checkbox',
-            'label'     => esc_html__('Filter ( OFF | ON )', 'healingy'),
-            'section'   => 'section_content_post_type',
-            'priority'  => 8
-        ))
-    );
-
-    // Filter Categories Order
-    $wp_customize->add_setting (
-        'portfolio_filter_category_order',
-        array(
-            'default' =>  themesflat_customize_default('portfolio_filter_category_order'),
-            'sanitize_callback' => 'themesflat_sanitize_text'
-        )
-    );
-    $wp_customize->add_control(
-        'portfolio_filter_category_order',
-        array(
-            'type'      => 'text',
-            'label'     => esc_html('Filter Slug Categories Order Split By ","', 'healingy'),
-            'section'   => 'section_content_post_type',
-            'priority'  => 9
-        )
-    );
-
-    /* Portfolio Single 
+    /* therapists Single 
     =================================================*/   
-    $wp_customize->add_control( new themesflat_Info( $wp_customize, 'portfoliosingle', array(
-        'label' => esc_html__('PORTFOLIO SINGLE', 'healingy'),
+    $wp_customize->add_control( new themesflat_Info( $wp_customize, 'therapistsingle', array(
+        'label' => esc_html__('Therapists Single', 'healingy'),
         'section' => 'section_content_post_type',
         'settings' => 'themesflat_options[info]',
         'priority' => 15
         ) )
     );
 
-    // Customize Portfolio Featured Title
+    // Customize therapists Featured Title
     $wp_customize->add_setting (
-        'portfolios_featured_title',
+        'therapists_featured_title',
         array(
-            'default' => themesflat_customize_default('portfolios_featured_title'),
+            'default' => themesflat_customize_default('therapists_featured_title'),
             'sanitize_callback' => 'themesflat_sanitize_text'
         )
     );
     $wp_customize->add_control(
-        'portfolios_featured_title',
+        'therapists_featured_title',
         array(
             'type'      => 'text',
-            'label'     => esc_html__('Customize Portfolio Featured Title', 'healingy'),
+            'label'     => esc_html__('Customize therapists Featured Title', 'healingy'),
             'section'   => 'section_content_post_type',
             'priority'  => 16
         )
     );
 
-       // Show Post Navigator portfolio
-       $wp_customize->add_setting (
-        'portfolios_show_entry_footer_content',
-        array (
-            'sanitize_callback' => 'themesflat_sanitize_checkbox',
-            'default' => themesflat_customize_default('portfolios_show_entry_footer_content'),    
-        )
-    );
-    $wp_customize->add_control( new themesflat_Checkbox( $wp_customize,
-        'portfolios_show_entry_footer_content',
-        array(
-            'type'      => 'checkbox',
-            'label'     => esc_html__('Show Tag & social share ( OFF | ON )', 'healingy'),
-            'section'   => 'section_content_post_type',
-            'priority'  => 17
-        ))
-    );
-
-    // Show Post Navigator portfolio
-    $wp_customize->add_setting (
-        'portfolios_show_post_navigator',
-        array (
-            'sanitize_callback' => 'themesflat_sanitize_checkbox',
-            'default' => themesflat_customize_default('portfolios_show_post_navigator'),    
-        )
-    );
-    $wp_customize->add_control( new themesflat_Checkbox( $wp_customize,
-        'portfolios_show_post_navigator',
-        array(
-            'type'      => 'checkbox',
-            'label'     => esc_html__('Single Navigator ( OFF | ON )', 'healingy'),
-            'section'   => 'section_content_post_type',
-            'priority'  => 18
-        ))
-    );
-
-    // Show Related Portfolios
-    $wp_customize->add_setting (
-        'portfolios_show_related',
-        array (
-            'sanitize_callback' => 'themesflat_sanitize_checkbox',
-            'default' => themesflat_customize_default('portfolios_show_related'),     
-        )
-    );
-    $wp_customize->add_control( new themesflat_Checkbox( $wp_customize,
-        'portfolios_show_related',
-        array(
-            'type'      => 'checkbox',
-            'label'     => esc_html__('Related Portfolios ( OFF | ON )', 'healingy'),
-            'section'   => 'section_content_post_type',
-            'priority'  => 19
-        ))
-    );  
-
-    // Gird columns portfolio related
-    $wp_customize->add_setting(
-        'portfolios_related_grid_columns',
-        array(
-            'default'           => themesflat_customize_default('portfolios_related_grid_columns'),
-            'sanitize_callback' => 'esc_attr',
-        )
-    );
-    $wp_customize->add_control(
-        'portfolios_related_grid_columns',
-        array(
-            'type'      => 'select',           
-            'section'   => 'section_content_post_type',
-            'priority'  => 18,
-            'label'     => esc_html__('Columns Related', 'healingy'),
-            'choices'   => array(
-                2     => esc_html__( '2 Columns', 'healingy' ),
-                3     => esc_html__( '3 Columns', 'healingy' ),
-                4     => esc_html__( '4 Columns', 'healingy' )
-            )
-        )
-    );
-
-    // Number Of Related Posts Portfolios
-    $wp_customize->add_setting (
-        'number_related_post_portfolios',
-        array(
-            'default' => themesflat_customize_default('number_related_post_portfolios'),
-            'sanitize_callback' => 'themesflat_sanitize_text'
-        )
-    );
-    $wp_customize->add_control(
-        'number_related_post_portfolios',
-        array(
-            'type'      => 'text',
-            'label'     => esc_html__('Number Of Related Posts', 'healingy'),
-            'section'   => 'section_content_post_type',
-            'priority'  => 19
-        )
-    );
 }
 
 if (function_exists('themesflat_register_services_post_type')) {
@@ -447,7 +253,7 @@ if (function_exists('themesflat_register_services_post_type')) {
         ))
     );
 
-    // Number Posts Portfolios
+    // Number Posts therapists
     $wp_customize->add_setting (
         'services_number_post',
         array(
@@ -465,7 +271,7 @@ if (function_exists('themesflat_register_services_post_type')) {
         )
     );
 
-    // Gird columns portfolio
+    // Gird columns therapists
     $wp_customize->add_setting(
         'services_grid_columns',
         array(

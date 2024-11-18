@@ -144,8 +144,8 @@ if (themesflat_get_opt_elementor('social_topbar') != '') {
                             </div><!-- /.header-modal-menu-left-btn -->
                             <?php endif;?>
                             <?php if ( $header_button == 1 ) :?>
-                            <a href="<?php echo get_permalink ( get_theme_mod ( 'header_button_url' )); ?>"
-                                class="tf-btn <?php if(!is_user_logged_in()) echo 'display-pop-login'; ?>"><span><?php echo wp_kses($header_button_text, themesflat_kses_allowed_html()); ?></span></a>
+                                <a class="tf-btn" href="<?php echo esc_url(themesflat_get_opt('header_button_url')) ?>"><span><?php echo wp_kses($header_button_text, themesflat_kses_allowed_html()); ?></span></a> 
+
                             <?php endif;?>
                         </div>
                         <?php endif; ?>

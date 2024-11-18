@@ -291,7 +291,7 @@ $wp_customize->add_setting(
           'type' => 'checkbox',
           'label' => esc_html__('Header Button ( OFF | ON )', 'healingy'),
           'section' => 'section_options',
-          'priority' => 6,
+          'priority' => 18,
       ))
   );
 
@@ -307,33 +307,26 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
     'header_button_text',
     array(
-        'label' => esc_html__( 'Button Text', 'healingy' ),
-        'section' => 'section_options',
+        'label' => esc_html__( 'Text', 'healingy' ),
+          'section' => 'section_options',
         'type' => 'text',
-        'priority' => 18,
-        'active_callback' => function () use ( $wp_customize ) {
-            return 1 === $wp_customize->get_setting( 'header_button' )->value();
-        }, 
+        'priority' => 19
     )
 );
-
-// Button url
+// Button Url
 $wp_customize->add_setting(
     'header_button_url',
     array(
-        'default' => '',
+        'default' => themesflat_customize_default('header_button_url'),
         'sanitize_callback' => 'themesflat_sanitize_text'
     )
 );
-
-//add control
-$wp_customize->add_control( 'header_button_url', array(
-    'label' => 'Select page for button link to',
-    'priority' => 19,
-    'active_callback' => function () use ( $wp_customize ) {
-        return 1 === $wp_customize->get_setting( 'header_button' )->value();
-    }, 
-    'type'  => 'dropdown-pages',
-    'section' => 'section_options',
-    'settings' => 'header_button_url'
-));
+$wp_customize->add_control(
+    'header_button_url',
+    array(
+        'label' => esc_html__( 'Url', 'healingy' ),
+          'section' => 'section_options',
+        'type' => 'text',
+        'priority' => 20
+    )
+);

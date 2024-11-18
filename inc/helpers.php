@@ -1051,8 +1051,8 @@ function themesflat_get_page_titles() {
                 $title = themesflat_get_opt('blog_featured_title');
             } elseif(is_single() && get_post_type() == 'services' && themesflat_get_opt('services_featured_title') != ''){                
                 $title = themesflat_get_opt('services_featured_title');
-            } elseif(is_single() && get_post_type() == 'team' && themesflat_get_opt('team_featured_title') != ''){                
-                $title = themesflat_get_opt('team_featured_title');
+            } elseif(is_single() && get_post_type() == 'therapists' && themesflat_get_opt('therapists_featured_title') != ''){                
+                $title = themesflat_get_opt('therapists_featured_title');
             } elseif(is_single() && get_post_type() == 'product' && themesflat_get_opt('product_featured_title') != ''){
                 $title = themesflat_get_opt('product_featured_title');
             }
