@@ -60,6 +60,9 @@
     }
 }
 @media only screen and (max-width: 1255px) {
+    .top-search .top-inner-search {
+        padding: 15px;
+    }
     .header-cart-wrapper {
         display: none;
     }
@@ -999,6 +1002,9 @@
     .video-video-box-button-sm {
         right: 1%;
     }
+    .wrap-therapists-post .therapists-post .features-post {
+        margin-bottom: 13px !important;
+    }
 }
 @media (max-width: 425px) {
     .wrap-cart-count .content-text {
@@ -1013,11 +1019,51 @@
     }
 }
 @media (max-width: 375px) {
+    footer .widget.widget_nav_menu .widgettitle::before {
+        content: '';
+        width: 13px;
+        height: 2px;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        background-color: currentColor;
+    }
+    footer .widget.widget_nav_menu .widgettitle::after {
+        content: '';
+        width: 2px;
+        height: 13px;
+        position: absolute;
+        top: 50%;
+        right: 20.5px;
+        transform: translateY(-50%);
+        background-color: currentColor;
+    }
+    footer .widget.widget_nav_menu .widgettitle.active::after {
+        display: none;
+    }
+    .wrap-widgets-2 .widget_nav_menu .menu{
+        display: none;
+    }
+    .wrap-widgets-2 .widget_nav_menu .menu.active{
+        display: block;
+    }
+    footer .widget.widget_nav_menu  h2 {
+        margin-bottom: 0px;
+        cursor: pointer;
+    }
+    .wrap-widgets-2 .widget_nav_menu .menu{
+        margin-top: 20px;
+    }
+    #footer .wrap-widgets-2 .widget.widget_block {
+        margin-bottom: 40px;
+    }
     #footer .wrap-widgets-1 {
         margin-bottom: 20px;
     }
     .footer-widgets .wrap-widgets-1 .widget {
         margin-bottom: 0px;
+        margin-top: 20px;
     }
     .wrap-widgets-2 .wp-block-group__inner-container {
         display: flex;
@@ -1026,9 +1072,6 @@
     }
     .comments-area ol.comment-list article .comment_content .comment_meta .comment_author {
         margin-right: 5px;
-    }
-    .top-search {
-        width: 250px;
     }
     #header.header-style3 .header-cart-wrapper,
     .header-style1 .flat-language {

@@ -1,25 +1,25 @@
 !(function (a) {
     "use strict";
     var e = {
-            Android: function () {
-                return navigator.userAgent.match(/Android/i);
-            },
-            BlackBerry: function () {
-                return navigator.userAgent.match(/BlackBerry/i);
-            },
-            iOS: function () {
-                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-            },
-            Opera: function () {
-                return navigator.userAgent.match(/Opera Mini/i);
-            },
-            Windows: function () {
-                return navigator.userAgent.match(/IEMobile/i);
-            },
-            any: function () {
-                return e.Android() || e.BlackBerry() || e.iOS() || e.Opera() || e.Windows();
-            },
+        Android: function () {
+            return navigator.userAgent.match(/Android/i);
         },
+        BlackBerry: function () {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function () {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function () {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function () {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function () {
+            return e.Android() || e.BlackBerry() || e.iOS() || e.Opera() || e.Windows();
+        },
+    },
         n = function () {
             a("body");
             let e = a(".modal-menu-left"),
@@ -27,8 +27,8 @@
                 t = e.children(".modal-menu__body");
             if (e.length) {
                 let o = function () {
-                        e.addClass("modal-menu--open");
-                    },
+                    e.addClass("modal-menu--open");
+                },
                     s = function () {
                         e.removeClass("modal-menu--open");
                     };
@@ -100,8 +100,8 @@
                                         ? (e.addClass("header-sticky"), a(".header-sticky").removeAttr("style"), t.show())
                                         : (a(".header-sticky").removeAttr("style"), e.removeClass("header-sticky"), t.hide())
                                     : a(window).scrollTop() >= o + n
-                                    ? (e.addClass("header-sticky"), a(".header-sticky").css("top", s), t.show())
-                                    : (a(".header-sticky").removeAttr("style"), e.removeClass("header-sticky"), t.hide());
+                                        ? (e.addClass("header-sticky"), a(".header-sticky").css("top", s), t.show())
+                                        : (a(".header-sticky").removeAttr("style"), e.removeClass("header-sticky"), t.hide());
                         }
                     });
             }
@@ -144,20 +144,20 @@
                             t.css({ opacity: 0 }),
                                 e.hasClass("blog-masonry")
                                     ? e.append(t).imagesLoaded(function () {
-                                          t.css({ opacity: 1 }), e.masonry("appended", t);
-                                      })
+                                        t.css({ opacity: 1 }), e.masonry("appended", t);
+                                    })
                                     : (t.css({ opacity: 1 }), e.append(t)),
                                 void 0 != o
                                     ? (a(".navigation.loadmore.blog a").attr("href", o), e.find(".infscr-loading").remove())
                                     : (e
-                                          .find(".infscr-loading")
-                                          .addClass("no-ajax")
-                                          .text("All posts loaded.")
-                                          .delay(2e3)
-                                          .queue(function () {
-                                              a(this).remove();
-                                          }),
-                                      a(".navigation.loadmore.blog").remove()),
+                                        .find(".infscr-loading")
+                                        .addClass("no-ajax")
+                                        .text("All posts loaded.")
+                                        .delay(2e3)
+                                        .queue(function () {
+                                            a(this).remove();
+                                        }),
+                                        a(".navigation.loadmore.blog").remove()),
                                 customizable_carousel(),
                                 iziModal();
                         },
@@ -222,8 +222,21 @@
                     a("#preloader").remove();
                 }, 1e3);
             });
+
         };
+    var q = function () {
+        var args = { duration: 250 };
+        $(".widget.widget_nav_menu h2").on("click", function () {
+            $(this).parent(".widget_nav_menu").toggleClass("open");
+            if (!$(this).parent(".widget_nav_menu").is(".open")) {
+                $(this).next().slideUp(args);
+            } else {
+                $(this).next().slideDown(args);
+            }
+        });
+    };
+
     a(function () {
-        n(), t(), o(), s(), i(), l(), c(), r(), d(), m(), u();
+        n(), t(), o(), s(), i(), l(), c(), r(), d(), m(), u(), q();
     });
 })(jQuery);

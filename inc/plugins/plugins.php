@@ -11,13 +11,8 @@ function themesflat_recommend_plugin() {
         ),
         array(
             'name' => esc_html__('ThemesFlat Core', 'healingy'),
-            'slug' => 'themesflat-core',
-            'source' => THEMESFLAT_DIR . 'inc/plugins/themesflat-core.zip',
-            'required' => true
-        ),
-        array(
-            'name' => esc_html__('ThemesFlat Addons for Elementor', 'healingy'),
-            'slug' => 'themesflat-addons-for-elementor',
+            'slug' => 'plugin-core',
+            'source' => THEMESFLAT_DIR . 'inc/plugins/plugin-core.zip',
             'required' => true
         ),
         array(

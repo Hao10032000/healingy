@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'healingy';
-  src:  url('../fonts/healingy.eot?4flrxx');
-  src:  url('../fonts/healingy.eot?4flrxx#iefix') format('embedded-opentype'),
-    url('../fonts/healingy.ttf?4flrxx') format('truetype'),
-    url('../fonts/healingy.woff?4flrxx') format('woff'),
-    url('../fonts/healingy.svg?4flrxx#healingy') format('svg');
+  src:  url('../fonts/healingy.eot?4750hs');
+  src:  url('../fonts/healingy.eot?4750hs#iefix') format('embedded-opentype'),
+    url('../fonts/healingy.ttf?4750hs') format('truetype'),
+    url('../fonts/healingy.woff?4750hs') format('woff'),
+    url('../fonts/healingy.svg?4750hs#healingy') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -45,6 +45,9 @@
 }
 .icon-healingy-btc:before {
   content: "\e970";
+}
+.icon-healingy-play:before {
+  content: "\e97d";
 }
 .icon-healingy-dribbble:before {
   content: "\e971";

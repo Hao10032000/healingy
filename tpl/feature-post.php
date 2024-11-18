@@ -48,7 +48,7 @@ switch ( get_post_format() ) {
 			<div class="video-video-box-overlay">
 				<div class="video-video-box-button-sm video-box-button-lg">					
 					<button class="video-video-play-icon" data-izimodal-open="#format-video">
-						<i class="icon-monal-play"></i>
+						<i class="icon-healingy-play"></i>
 					</button>
 				</div>					
 			</div>';

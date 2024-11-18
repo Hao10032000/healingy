@@ -1129,4 +1129,11 @@ li#accordion-panel-shop_panel > h3.accordion-section-title:before {
 .themesflat-sortable li.themesflat-sortable-li .themesflat-hide-sortee {
     cursor: pointer;
 }
+.browse-media {
+    padding: 10px 20px;
+    display: inline-block;
+    border: 1px solid;
+    margin: 15px 0;
+    border-radius: 5px;
+}
 

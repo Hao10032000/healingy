@@ -589,3 +589,4 @@ function healingy_elementor_setup() {
 add_action( 'after_switch_theme', 'healingy_elementor_setup' );
 
 add_filter('wpcf7_autop_or_not', '__return_false'); 
+// add_filter( 'use_widgets_block_editor', '__return_false' );

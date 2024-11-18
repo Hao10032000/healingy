@@ -65,6 +65,7 @@ function themesflat_customize_default($key) {
 		'site_logo_sticky'	=> THEMESFLAT_LINK . 'images/logo.png',
 		'site_logo_fixed'	=> THEMESFLAT_LINK . 'images/logo.png',
 		'site_logo_mobile'	=> THEMESFLAT_LINK . 'images/logo.png',	
+		'header_color_sticky' => '',
 		'show_bottom' => 1,		
 		'header_backgroundcolor_sticky'=>'#fff',	
 
